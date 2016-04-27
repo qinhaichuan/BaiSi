@@ -11,10 +11,8 @@
 		F8B41F351CD0C51F0037F306 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F341CD0C51F0037F306 /* main.m */; };
 		F8B41F381CD0C51F0037F306 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F371CD0C51F0037F306 /* AppDelegate.m */; };
 		F8B41F3B1CD0C51F0037F306 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F3A1CD0C51F0037F306 /* ViewController.m */; };
-		F8B41F3E1CD0C51F0037F306 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B41F3C1CD0C51F0037F306 /* Main.storyboard */; };
 		F8B41F411CD0C51F0037F306 /* Baisi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F3F1CD0C51F0037F306 /* Baisi.xcdatamodeld */; };
 		F8B41F431CD0C51F0037F306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B41F421CD0C51F0037F306 /* Assets.xcassets */; };
-		F8B41F461CD0C51F0037F306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B41F441CD0C51F0037F306 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,11 +25,10 @@
 		F8B41F371CD0C51F0037F306 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F8B41F391CD0C51F0037F306 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F8B41F3A1CD0C51F0037F306 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F8B41F3D1CD0C51F0037F306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8B41F401CD0C51F0037F306 /* Baisi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Baisi.xcdatamodel; sourceTree = "<group>"; };
 		F8B41F421CD0C51F0037F306 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F8B41F451CD0C51F0037F306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8B41F471CD0C51F0037F306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8B41F4D1CD0FF990037F306 /* QHC.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHC.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,12 +85,11 @@
 				F8B41F371CD0C51F0037F306 /* AppDelegate.m */,
 				F8B41F391CD0C51F0037F306 /* ViewController.h */,
 				F8B41F3A1CD0C51F0037F306 /* ViewController.m */,
-				F8B41F3C1CD0C51F0037F306 /* Main.storyboard */,
 				F8B41F421CD0C51F0037F306 /* Assets.xcassets */,
-				F8B41F441CD0C51F0037F306 /* LaunchScreen.storyboard */,
 				F8B41F471CD0C51F0037F306 /* Info.plist */,
 				F8B41F3F1CD0C51F0037F306 /* Baisi.xcdatamodeld */,
 				F8B41F331CD0C51F0037F306 /* Supporting Files */,
+				F8B41F4D1CD0FF990037F306 /* QHC.pch */,
 			);
 			path = Baisi;
 			sourceTree = "<group>";
@@ -135,6 +131,7 @@
 		F8B41F281CD0C51F0037F306 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = QHC;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "秦海川";
 				TargetAttributes = {
@@ -167,9 +164,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8B41F461CD0C51F0037F306 /* LaunchScreen.storyboard in Resources */,
 				F8B41F431CD0C51F0037F306 /* Assets.xcassets in Resources */,
-				F8B41F3E1CD0C51F0037F306 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,25 +231,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		F8B41F3C1CD0C51F0037F306 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F8B41F3D1CD0C51F0037F306 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F8B41F441CD0C51F0037F306 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F8B41F451CD0C51F0037F306 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F8B41F481CD0C51F0037F306 /* Debug */ = {
@@ -344,6 +320,9 @@
 			baseConfigurationReference = 2F8A04677EB3A8E158219F63 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Baisi/QHC.pch";
 				INFOPLIST_FILE = Baisi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = QHC.Baisi;
@@ -356,6 +335,9 @@
 			baseConfigurationReference = AAD2376BC69302D5111E0809 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Baisi/QHC.pch";
 				INFOPLIST_FILE = Baisi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = QHC.Baisi;

@@ -19,6 +19,8 @@
 		F8B41F8F1CD1C1230037F306 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F811CD1C1230037F306 /* main.m */; };
 		F8B41F901CD1C1230037F306 /* QHCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F841CD1C1230037F306 /* QHCTabBar.m */; };
 		F8B41F911CD1C1230037F306 /* QHCTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F861CD1C1230037F306 /* QHCTabBarVC.m */; };
+		F8B41F961CD1CBF70037F306 /* QHCSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F951CD1CBF70037F306 /* QHCSettingViewController.m */; };
+		F8B41F9A1CD1CD080037F306 /* UIBarButtonItem+QHCBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F991CD1CD080037F306 /* UIBarButtonItem+QHCBarButtonItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,10 @@
 		F8B41F841CD1C1230037F306 /* QHCTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCTabBar.m; sourceTree = "<group>"; };
 		F8B41F851CD1C1230037F306 /* QHCTabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCTabBarVC.h; sourceTree = "<group>"; };
 		F8B41F861CD1C1230037F306 /* QHCTabBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCTabBarVC.m; sourceTree = "<group>"; };
+		F8B41F941CD1CBF70037F306 /* QHCSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCSettingViewController.h; sourceTree = "<group>"; };
+		F8B41F951CD1CBF70037F306 /* QHCSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCSettingViewController.m; sourceTree = "<group>"; };
+		F8B41F981CD1CD080037F306 /* UIBarButtonItem+QHCBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+QHCBarButtonItem.h"; sourceTree = "<group>"; };
+		F8B41F991CD1CD080037F306 /* UIBarButtonItem+QHCBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+QHCBarButtonItem.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,9 +124,9 @@
 		F8B41F621CD1C1230037F306 /* Essence */ = {
 			isa = PBXGroup;
 			children = (
+				F8B41F651CD1C1230037F306 /* ViewContorller */,
 				F8B41F631CD1C1230037F306 /* Model */,
 				F8B41F641CD1C1230037F306 /* View */,
-				F8B41F651CD1C1230037F306 /* ViewContorller */,
 			);
 			path = Essence;
 			sourceTree = "<group>";
@@ -184,9 +190,9 @@
 		F8B41F6E1CD1C1230037F306 /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				F8B41F711CD1C1230037F306 /* ViewContorller */,
 				F8B41F6F1CD1C1230037F306 /* Model */,
 				F8B41F701CD1C1230037F306 /* View */,
-				F8B41F711CD1C1230037F306 /* ViewContorller */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -210,6 +216,8 @@
 			children = (
 				F8B41F721CD1C1230037F306 /* QHCMeViewController.h */,
 				F8B41F731CD1C1230037F306 /* QHCMeViewController.m */,
+				F8B41F941CD1CBF70037F306 /* QHCSettingViewController.h */,
+				F8B41F951CD1CBF70037F306 /* QHCSettingViewController.m */,
 			);
 			path = ViewContorller;
 			sourceTree = "<group>";
@@ -269,6 +277,8 @@
 		F8B41F7F1CD1C1230037F306 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				F8B41F981CD1CD080037F306 /* UIBarButtonItem+QHCBarButtonItem.h */,
+				F8B41F991CD1CD080037F306 /* UIBarButtonItem+QHCBarButtonItem.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -406,10 +416,12 @@
 				F8B41F8D1CD1C1230037F306 /* Baisi.xcdatamodeld in Sources */,
 				F8B41F901CD1C1230037F306 /* QHCTabBar.m in Sources */,
 				F8B41F911CD1C1230037F306 /* QHCTabBarVC.m in Sources */,
+				F8B41F961CD1CBF70037F306 /* QHCSettingViewController.m in Sources */,
 				F8B41F8B1CD1C1230037F306 /* QHCNewViewController.m in Sources */,
 				F8B41F8A1CD1C1230037F306 /* QHCMeViewController.m in Sources */,
 				F8B41F8F1CD1C1230037F306 /* main.m in Sources */,
 				F8B41F891CD1C1230037F306 /* QHCFriendTrendsViewController.m in Sources */,
+				F8B41F9A1CD1CD080037F306 /* UIBarButtonItem+QHCBarButtonItem.m in Sources */,
 				F8B41F8C1CD1C1230037F306 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

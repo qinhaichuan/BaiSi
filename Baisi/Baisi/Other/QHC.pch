@@ -9,16 +9,24 @@
 #ifndef QHC_pch
 #define QHC_pch
 
+
+#ifdef __OBJC__
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
-#ifndef DEBUG
+#import "UIBarButtonItem+QHCBarButtonItem.h"
+
+
+
+
+
+#ifdef DEBUG
 #define QHCLog(...) NSLog(__VA_ARGS__)
 #else
 #define QHCLog(...)
 #endif
 
-#define QHCLogFunc QHCLog(@"%@", __func__);
+#define QHCLogFunc QHCLog(@"%s", __func__);
 
 // 颜色
 #define QHCColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)];
@@ -38,6 +46,5 @@
 #define QHCData(s) ((s!=nil) && [s isKindOfClass:[NSData class]]);
 #define QHCNull(s) (![s isKindOfClass:[NSNull class]]);
 
-
-
+#endif
 #endif /* QHC_pch */

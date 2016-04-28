@@ -13,6 +13,13 @@
 		F8B41F3B1CD0C51F0037F306 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F3A1CD0C51F0037F306 /* ViewController.m */; };
 		F8B41F411CD0C51F0037F306 /* Baisi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F3F1CD0C51F0037F306 /* Baisi.xcdatamodeld */; };
 		F8B41F431CD0C51F0037F306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B41F421CD0C51F0037F306 /* Assets.xcassets */; };
+		F8B41F501CD1A5710037F306 /* QHCTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F4F1CD1A5710037F306 /* QHCTabBarVC.m */; };
+		F8B41F521CD1A62F0037F306 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B41F511CD1A62F0037F306 /* Images.xcassets */; };
+		F8B41F551CD1B6780037F306 /* QHCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F541CD1B6780037F306 /* QHCTabBar.m */; };
+		F8B41F581CD1BBB30037F306 /* QHCEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F571CD1BBB30037F306 /* QHCEssenceViewController.m */; };
+		F8B41F5B1CD1BBBE0037F306 /* QHCNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F5A1CD1BBBE0037F306 /* QHCNewViewController.m */; };
+		F8B41F5E1CD1BBD20037F306 /* QHCFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F5D1CD1BBD20037F306 /* QHCFriendTrendsViewController.m */; };
+		F8B41F611CD1BBDC0037F306 /* QHCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F601CD1BBDC0037F306 /* QHCMeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +36,19 @@
 		F8B41F421CD0C51F0037F306 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8B41F471CD0C51F0037F306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8B41F4D1CD0FF990037F306 /* QHC.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHC.pch; sourceTree = "<group>"; };
+		F8B41F4E1CD1A5710037F306 /* QHCTabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCTabBarVC.h; sourceTree = "<group>"; };
+		F8B41F4F1CD1A5710037F306 /* QHCTabBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCTabBarVC.m; sourceTree = "<group>"; };
+		F8B41F511CD1A62F0037F306 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F8B41F531CD1B6780037F306 /* QHCTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCTabBar.h; sourceTree = "<group>"; };
+		F8B41F541CD1B6780037F306 /* QHCTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCTabBar.m; sourceTree = "<group>"; };
+		F8B41F561CD1BBB30037F306 /* QHCEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCEssenceViewController.h; sourceTree = "<group>"; };
+		F8B41F571CD1BBB30037F306 /* QHCEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCEssenceViewController.m; sourceTree = "<group>"; };
+		F8B41F591CD1BBBE0037F306 /* QHCNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCNewViewController.h; sourceTree = "<group>"; };
+		F8B41F5A1CD1BBBE0037F306 /* QHCNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCNewViewController.m; sourceTree = "<group>"; };
+		F8B41F5C1CD1BBD20037F306 /* QHCFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCFriendTrendsViewController.h; sourceTree = "<group>"; };
+		F8B41F5D1CD1BBD20037F306 /* QHCFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCFriendTrendsViewController.m; sourceTree = "<group>"; };
+		F8B41F5F1CD1BBDC0037F306 /* QHCMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCMeViewController.h; sourceTree = "<group>"; };
+		F8B41F601CD1BBDC0037F306 /* QHCMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCMeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +103,18 @@
 			children = (
 				F8B41F361CD0C51F0037F306 /* AppDelegate.h */,
 				F8B41F371CD0C51F0037F306 /* AppDelegate.m */,
+				F8B41F4E1CD1A5710037F306 /* QHCTabBarVC.h */,
+				F8B41F4F1CD1A5710037F306 /* QHCTabBarVC.m */,
+				F8B41F561CD1BBB30037F306 /* QHCEssenceViewController.h */,
+				F8B41F571CD1BBB30037F306 /* QHCEssenceViewController.m */,
+				F8B41F591CD1BBBE0037F306 /* QHCNewViewController.h */,
+				F8B41F5A1CD1BBBE0037F306 /* QHCNewViewController.m */,
+				F8B41F5C1CD1BBD20037F306 /* QHCFriendTrendsViewController.h */,
+				F8B41F5D1CD1BBD20037F306 /* QHCFriendTrendsViewController.m */,
+				F8B41F5F1CD1BBDC0037F306 /* QHCMeViewController.h */,
+				F8B41F601CD1BBDC0037F306 /* QHCMeViewController.m */,
+				F8B41F531CD1B6780037F306 /* QHCTabBar.h */,
+				F8B41F541CD1B6780037F306 /* QHCTabBar.m */,
 				F8B41F391CD0C51F0037F306 /* ViewController.h */,
 				F8B41F3A1CD0C51F0037F306 /* ViewController.m */,
 				F8B41F421CD0C51F0037F306 /* Assets.xcassets */,
@@ -90,6 +122,7 @@
 				F8B41F3F1CD0C51F0037F306 /* Baisi.xcdatamodeld */,
 				F8B41F331CD0C51F0037F306 /* Supporting Files */,
 				F8B41F4D1CD0FF990037F306 /* QHC.pch */,
+				F8B41F511CD1A62F0037F306 /* Images.xcassets */,
 			);
 			path = Baisi;
 			sourceTree = "<group>";
@@ -165,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B41F431CD0C51F0037F306 /* Assets.xcassets in Resources */,
+				F8B41F521CD1A62F0037F306 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,10 +257,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8B41F5E1CD1BBD20037F306 /* QHCFriendTrendsViewController.m in Sources */,
+				F8B41F611CD1BBDC0037F306 /* QHCMeViewController.m in Sources */,
+				F8B41F581CD1BBB30037F306 /* QHCEssenceViewController.m in Sources */,
+				F8B41F551CD1B6780037F306 /* QHCTabBar.m in Sources */,
 				F8B41F3B1CD0C51F0037F306 /* ViewController.m in Sources */,
 				F8B41F381CD0C51F0037F306 /* AppDelegate.m in Sources */,
 				F8B41F411CD0C51F0037F306 /* Baisi.xcdatamodeld in Sources */,
 				F8B41F351CD0C51F0037F306 /* main.m in Sources */,
+				F8B41F5B1CD1BBBE0037F306 /* QHCNewViewController.m in Sources */,
+				F8B41F501CD1A5710037F306 /* QHCTabBarVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

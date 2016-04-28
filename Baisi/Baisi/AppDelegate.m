@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "QHCTabBarVC.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] init];
+    self.window.rootViewController = [[QHCTabBarVC alloc] init];
+    [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 

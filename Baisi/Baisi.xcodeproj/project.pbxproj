@@ -23,6 +23,8 @@
 		F8B41F9A1CD1CD080037F306 /* UIBarButtonItem+QHCBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F991CD1CD080037F306 /* UIBarButtonItem+QHCBarButtonItem.m */; };
 		F8B41F9D1CD2059E0037F306 /* QHCTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F9C1CD2059E0037F306 /* QHCTestViewController.m */; };
 		F8B41FA01CD20EE80037F306 /* QHCNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F9F1CD20EE80037F306 /* QHCNavigationViewController.m */; };
+		F8B41FA31CD21A9B0037F306 /* QHCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41FA21CD21A9B0037F306 /* QHCLoginViewController.m */; };
+		F8B41FA61CD21ABA0037F306 /* QHCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41FA51CD21ABA0037F306 /* QHCButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,10 @@
 		F8B41F9C1CD2059E0037F306 /* QHCTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCTestViewController.m; sourceTree = "<group>"; };
 		F8B41F9E1CD20EE80037F306 /* QHCNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCNavigationViewController.h; sourceTree = "<group>"; };
 		F8B41F9F1CD20EE80037F306 /* QHCNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCNavigationViewController.m; sourceTree = "<group>"; };
+		F8B41FA11CD21A9B0037F306 /* QHCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCLoginViewController.h; sourceTree = "<group>"; };
+		F8B41FA21CD21A9B0037F306 /* QHCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCLoginViewController.m; sourceTree = "<group>"; };
+		F8B41FA41CD21ABA0037F306 /* QHCButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCButton.h; sourceTree = "<group>"; };
+		F8B41FA51CD21ABA0037F306 /* QHCButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +186,8 @@
 		F8B41F6A1CD1C1230037F306 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F8B41FA41CD21ABA0037F306 /* QHCButton.h */,
+				F8B41FA51CD21ABA0037F306 /* QHCButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,6 +199,8 @@
 				F8B41F6D1CD1C1230037F306 /* QHCFriendTrendsViewController.m */,
 				F8B41F9B1CD2059E0037F306 /* QHCTestViewController.h */,
 				F8B41F9C1CD2059E0037F306 /* QHCTestViewController.m */,
+				F8B41FA11CD21A9B0037F306 /* QHCLoginViewController.h */,
+				F8B41FA21CD21A9B0037F306 /* QHCLoginViewController.m */,
 			);
 			path = ViewContorller;
 			sourceTree = "<group>";
@@ -431,7 +441,9 @@
 				F8B41F8B1CD1C1230037F306 /* QHCNewViewController.m in Sources */,
 				F8B41F8A1CD1C1230037F306 /* QHCMeViewController.m in Sources */,
 				F8B41F8F1CD1C1230037F306 /* main.m in Sources */,
+				F8B41FA31CD21A9B0037F306 /* QHCLoginViewController.m in Sources */,
 				F8B41F891CD1C1230037F306 /* QHCFriendTrendsViewController.m in Sources */,
+				F8B41FA61CD21ABA0037F306 /* QHCButton.m in Sources */,
 				F8B41F9D1CD2059E0037F306 /* QHCTestViewController.m in Sources */,
 				F8B41F9A1CD1CD080037F306 /* UIBarButtonItem+QHCBarButtonItem.m in Sources */,
 				F8B41F8C1CD1C1230037F306 /* AppDelegate.m in Sources */,

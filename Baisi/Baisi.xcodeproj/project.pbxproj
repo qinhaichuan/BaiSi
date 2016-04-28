@@ -8,18 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		3650F57EDBE52E4C65FE8880 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D843ECCE28D1F08BC29629 /* libPods.a */; };
-		F8B41F351CD0C51F0037F306 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F341CD0C51F0037F306 /* main.m */; };
-		F8B41F381CD0C51F0037F306 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F371CD0C51F0037F306 /* AppDelegate.m */; };
-		F8B41F3B1CD0C51F0037F306 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F3A1CD0C51F0037F306 /* ViewController.m */; };
-		F8B41F411CD0C51F0037F306 /* Baisi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F3F1CD0C51F0037F306 /* Baisi.xcdatamodeld */; };
 		F8B41F431CD0C51F0037F306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B41F421CD0C51F0037F306 /* Assets.xcassets */; };
-		F8B41F501CD1A5710037F306 /* QHCTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F4F1CD1A5710037F306 /* QHCTabBarVC.m */; };
-		F8B41F521CD1A62F0037F306 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B41F511CD1A62F0037F306 /* Images.xcassets */; };
-		F8B41F551CD1B6780037F306 /* QHCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F541CD1B6780037F306 /* QHCTabBar.m */; };
-		F8B41F581CD1BBB30037F306 /* QHCEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F571CD1BBB30037F306 /* QHCEssenceViewController.m */; };
-		F8B41F5B1CD1BBBE0037F306 /* QHCNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F5A1CD1BBBE0037F306 /* QHCNewViewController.m */; };
-		F8B41F5E1CD1BBD20037F306 /* QHCFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F5D1CD1BBD20037F306 /* QHCFriendTrendsViewController.m */; };
-		F8B41F611CD1BBDC0037F306 /* QHCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F601CD1BBDC0037F306 /* QHCMeViewController.m */; };
+		F8B41F881CD1C1230037F306 /* QHCEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F671CD1C1230037F306 /* QHCEssenceViewController.m */; };
+		F8B41F891CD1C1230037F306 /* QHCFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F6D1CD1C1230037F306 /* QHCFriendTrendsViewController.m */; };
+		F8B41F8A1CD1C1230037F306 /* QHCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F731CD1C1230037F306 /* QHCMeViewController.m */; };
+		F8B41F8B1CD1C1230037F306 /* QHCNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F791CD1C1230037F306 /* QHCNewViewController.m */; };
+		F8B41F8C1CD1C1230037F306 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F7C1CD1C1230037F306 /* AppDelegate.m */; };
+		F8B41F8D1CD1C1230037F306 /* Baisi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F7D1CD1C1230037F306 /* Baisi.xcdatamodeld */; };
+		F8B41F8E1CD1C1230037F306 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8B41F801CD1C1230037F306 /* Info.plist */; };
+		F8B41F8F1CD1C1230037F306 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F811CD1C1230037F306 /* main.m */; };
+		F8B41F901CD1C1230037F306 /* QHCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F841CD1C1230037F306 /* QHCTabBar.m */; };
+		F8B41F911CD1C1230037F306 /* QHCTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F861CD1C1230037F306 /* QHCTabBarVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,28 +26,25 @@
 		AAD2376BC69302D5111E0809 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C5D843ECCE28D1F08BC29629 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B41F301CD0C51F0037F306 /* Baisi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baisi.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8B41F341CD0C51F0037F306 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F8B41F361CD0C51F0037F306 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F8B41F371CD0C51F0037F306 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F8B41F391CD0C51F0037F306 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F8B41F3A1CD0C51F0037F306 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F8B41F401CD0C51F0037F306 /* Baisi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Baisi.xcdatamodel; sourceTree = "<group>"; };
 		F8B41F421CD0C51F0037F306 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F8B41F471CD0C51F0037F306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8B41F4D1CD0FF990037F306 /* QHC.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHC.pch; sourceTree = "<group>"; };
-		F8B41F4E1CD1A5710037F306 /* QHCTabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCTabBarVC.h; sourceTree = "<group>"; };
-		F8B41F4F1CD1A5710037F306 /* QHCTabBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCTabBarVC.m; sourceTree = "<group>"; };
-		F8B41F511CD1A62F0037F306 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F8B41F531CD1B6780037F306 /* QHCTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCTabBar.h; sourceTree = "<group>"; };
-		F8B41F541CD1B6780037F306 /* QHCTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCTabBar.m; sourceTree = "<group>"; };
-		F8B41F561CD1BBB30037F306 /* QHCEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCEssenceViewController.h; sourceTree = "<group>"; };
-		F8B41F571CD1BBB30037F306 /* QHCEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCEssenceViewController.m; sourceTree = "<group>"; };
-		F8B41F591CD1BBBE0037F306 /* QHCNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCNewViewController.h; sourceTree = "<group>"; };
-		F8B41F5A1CD1BBBE0037F306 /* QHCNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCNewViewController.m; sourceTree = "<group>"; };
-		F8B41F5C1CD1BBD20037F306 /* QHCFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCFriendTrendsViewController.h; sourceTree = "<group>"; };
-		F8B41F5D1CD1BBD20037F306 /* QHCFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCFriendTrendsViewController.m; sourceTree = "<group>"; };
-		F8B41F5F1CD1BBDC0037F306 /* QHCMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCMeViewController.h; sourceTree = "<group>"; };
-		F8B41F601CD1BBDC0037F306 /* QHCMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCMeViewController.m; sourceTree = "<group>"; };
+		F8B41F661CD1C1230037F306 /* QHCEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCEssenceViewController.h; sourceTree = "<group>"; };
+		F8B41F671CD1C1230037F306 /* QHCEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCEssenceViewController.m; sourceTree = "<group>"; };
+		F8B41F6C1CD1C1230037F306 /* QHCFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCFriendTrendsViewController.h; sourceTree = "<group>"; };
+		F8B41F6D1CD1C1230037F306 /* QHCFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCFriendTrendsViewController.m; sourceTree = "<group>"; };
+		F8B41F721CD1C1230037F306 /* QHCMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCMeViewController.h; sourceTree = "<group>"; };
+		F8B41F731CD1C1230037F306 /* QHCMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCMeViewController.m; sourceTree = "<group>"; };
+		F8B41F781CD1C1230037F306 /* QHCNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCNewViewController.h; sourceTree = "<group>"; };
+		F8B41F791CD1C1230037F306 /* QHCNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCNewViewController.m; sourceTree = "<group>"; };
+		F8B41F7B1CD1C1230037F306 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F8B41F7C1CD1C1230037F306 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F8B41F7E1CD1C1230037F306 /* Baisi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Baisi.xcdatamodel; sourceTree = "<group>"; };
+		F8B41F801CD1C1230037F306 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8B41F811CD1C1230037F306 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F8B41F821CD1C1230037F306 /* QHC.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHC.pch; sourceTree = "<group>"; };
+		F8B41F831CD1C1230037F306 /* QHCTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCTabBar.h; sourceTree = "<group>"; };
+		F8B41F841CD1C1230037F306 /* QHCTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCTabBar.m; sourceTree = "<group>"; };
+		F8B41F851CD1C1230037F306 /* QHCTabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCTabBarVC.h; sourceTree = "<group>"; };
+		F8B41F861CD1C1230037F306 /* QHCTabBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCTabBarVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,28 +97,13 @@
 		F8B41F321CD0C51F0037F306 /* Baisi */ = {
 			isa = PBXGroup;
 			children = (
-				F8B41F361CD0C51F0037F306 /* AppDelegate.h */,
-				F8B41F371CD0C51F0037F306 /* AppDelegate.m */,
-				F8B41F4E1CD1A5710037F306 /* QHCTabBarVC.h */,
-				F8B41F4F1CD1A5710037F306 /* QHCTabBarVC.m */,
-				F8B41F561CD1BBB30037F306 /* QHCEssenceViewController.h */,
-				F8B41F571CD1BBB30037F306 /* QHCEssenceViewController.m */,
-				F8B41F591CD1BBBE0037F306 /* QHCNewViewController.h */,
-				F8B41F5A1CD1BBBE0037F306 /* QHCNewViewController.m */,
-				F8B41F5C1CD1BBD20037F306 /* QHCFriendTrendsViewController.h */,
-				F8B41F5D1CD1BBD20037F306 /* QHCFriendTrendsViewController.m */,
-				F8B41F5F1CD1BBDC0037F306 /* QHCMeViewController.h */,
-				F8B41F601CD1BBDC0037F306 /* QHCMeViewController.m */,
-				F8B41F531CD1B6780037F306 /* QHCTabBar.h */,
-				F8B41F541CD1B6780037F306 /* QHCTabBar.m */,
-				F8B41F391CD0C51F0037F306 /* ViewController.h */,
-				F8B41F3A1CD0C51F0037F306 /* ViewController.m */,
+				F8B41F621CD1C1230037F306 /* Essence */,
+				F8B41F681CD1C1230037F306 /* FrinendTrends */,
+				F8B41F6E1CD1C1230037F306 /* Me */,
+				F8B41F741CD1C1230037F306 /* New */,
+				F8B41F7A1CD1C1230037F306 /* Other */,
 				F8B41F421CD0C51F0037F306 /* Assets.xcassets */,
-				F8B41F471CD0C51F0037F306 /* Info.plist */,
-				F8B41F3F1CD0C51F0037F306 /* Baisi.xcdatamodeld */,
 				F8B41F331CD0C51F0037F306 /* Supporting Files */,
-				F8B41F4D1CD0FF990037F306 /* QHC.pch */,
-				F8B41F511CD1A62F0037F306 /* Images.xcassets */,
 			);
 			path = Baisi;
 			sourceTree = "<group>";
@@ -130,9 +111,173 @@
 		F8B41F331CD0C51F0037F306 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F8B41F341CD0C51F0037F306 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8B41F621CD1C1230037F306 /* Essence */ = {
+			isa = PBXGroup;
+			children = (
+				F8B41F631CD1C1230037F306 /* Model */,
+				F8B41F641CD1C1230037F306 /* View */,
+				F8B41F651CD1C1230037F306 /* ViewContorller */,
+			);
+			path = Essence;
+			sourceTree = "<group>";
+		};
+		F8B41F631CD1C1230037F306 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F8B41F641CD1C1230037F306 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F8B41F651CD1C1230037F306 /* ViewContorller */ = {
+			isa = PBXGroup;
+			children = (
+				F8B41F661CD1C1230037F306 /* QHCEssenceViewController.h */,
+				F8B41F671CD1C1230037F306 /* QHCEssenceViewController.m */,
+			);
+			path = ViewContorller;
+			sourceTree = "<group>";
+		};
+		F8B41F681CD1C1230037F306 /* FrinendTrends */ = {
+			isa = PBXGroup;
+			children = (
+				F8B41F691CD1C1230037F306 /* Model */,
+				F8B41F6A1CD1C1230037F306 /* View */,
+				F8B41F6B1CD1C1230037F306 /* ViewContorller */,
+			);
+			path = FrinendTrends;
+			sourceTree = "<group>";
+		};
+		F8B41F691CD1C1230037F306 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F8B41F6A1CD1C1230037F306 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F8B41F6B1CD1C1230037F306 /* ViewContorller */ = {
+			isa = PBXGroup;
+			children = (
+				F8B41F6C1CD1C1230037F306 /* QHCFriendTrendsViewController.h */,
+				F8B41F6D1CD1C1230037F306 /* QHCFriendTrendsViewController.m */,
+			);
+			path = ViewContorller;
+			sourceTree = "<group>";
+		};
+		F8B41F6E1CD1C1230037F306 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				F8B41F6F1CD1C1230037F306 /* Model */,
+				F8B41F701CD1C1230037F306 /* View */,
+				F8B41F711CD1C1230037F306 /* ViewContorller */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		F8B41F6F1CD1C1230037F306 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F8B41F701CD1C1230037F306 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F8B41F711CD1C1230037F306 /* ViewContorller */ = {
+			isa = PBXGroup;
+			children = (
+				F8B41F721CD1C1230037F306 /* QHCMeViewController.h */,
+				F8B41F731CD1C1230037F306 /* QHCMeViewController.m */,
+			);
+			path = ViewContorller;
+			sourceTree = "<group>";
+		};
+		F8B41F741CD1C1230037F306 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				F8B41F751CD1C1230037F306 /* Model */,
+				F8B41F761CD1C1230037F306 /* View */,
+				F8B41F771CD1C1230037F306 /* ViewContorller */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
+		F8B41F751CD1C1230037F306 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F8B41F761CD1C1230037F306 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F8B41F771CD1C1230037F306 /* ViewContorller */ = {
+			isa = PBXGroup;
+			children = (
+				F8B41F781CD1C1230037F306 /* QHCNewViewController.h */,
+				F8B41F791CD1C1230037F306 /* QHCNewViewController.m */,
+			);
+			path = ViewContorller;
+			sourceTree = "<group>";
+		};
+		F8B41F7A1CD1C1230037F306 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				F8B41F871CD1C1230037F306 /* Tools */,
+				F8B41F7F1CD1C1230037F306 /* Category */,
+				F8B41F7B1CD1C1230037F306 /* AppDelegate.h */,
+				F8B41F7C1CD1C1230037F306 /* AppDelegate.m */,
+				F8B41F7D1CD1C1230037F306 /* Baisi.xcdatamodeld */,
+				F8B41F801CD1C1230037F306 /* Info.plist */,
+				F8B41F811CD1C1230037F306 /* main.m */,
+				F8B41F821CD1C1230037F306 /* QHC.pch */,
+				F8B41F831CD1C1230037F306 /* QHCTabBar.h */,
+				F8B41F841CD1C1230037F306 /* QHCTabBar.m */,
+				F8B41F851CD1C1230037F306 /* QHCTabBarVC.h */,
+				F8B41F861CD1C1230037F306 /* QHCTabBarVC.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F8B41F7F1CD1C1230037F306 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F8B41F871CD1C1230037F306 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,7 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B41F431CD0C51F0037F306 /* Assets.xcassets in Resources */,
-				F8B41F521CD1A62F0037F306 /* Images.xcassets in Resources */,
+				F8B41F8E1CD1C1230037F306 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,16 +402,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8B41F5E1CD1BBD20037F306 /* QHCFriendTrendsViewController.m in Sources */,
-				F8B41F611CD1BBDC0037F306 /* QHCMeViewController.m in Sources */,
-				F8B41F581CD1BBB30037F306 /* QHCEssenceViewController.m in Sources */,
-				F8B41F551CD1B6780037F306 /* QHCTabBar.m in Sources */,
-				F8B41F3B1CD0C51F0037F306 /* ViewController.m in Sources */,
-				F8B41F381CD0C51F0037F306 /* AppDelegate.m in Sources */,
-				F8B41F411CD0C51F0037F306 /* Baisi.xcdatamodeld in Sources */,
-				F8B41F351CD0C51F0037F306 /* main.m in Sources */,
-				F8B41F5B1CD1BBBE0037F306 /* QHCNewViewController.m in Sources */,
-				F8B41F501CD1A5710037F306 /* QHCTabBarVC.m in Sources */,
+				F8B41F881CD1C1230037F306 /* QHCEssenceViewController.m in Sources */,
+				F8B41F8D1CD1C1230037F306 /* Baisi.xcdatamodeld in Sources */,
+				F8B41F901CD1C1230037F306 /* QHCTabBar.m in Sources */,
+				F8B41F911CD1C1230037F306 /* QHCTabBarVC.m in Sources */,
+				F8B41F8B1CD1C1230037F306 /* QHCNewViewController.m in Sources */,
+				F8B41F8A1CD1C1230037F306 /* QHCMeViewController.m in Sources */,
+				F8B41F8F1CD1C1230037F306 /* main.m in Sources */,
+				F8B41F891CD1C1230037F306 /* QHCFriendTrendsViewController.m in Sources */,
+				F8B41F8C1CD1C1230037F306 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,10 +504,10 @@
 			baseConfigurationReference = 2F8A04677EB3A8E158219F63 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/Baisi/QHC.pch";
-				INFOPLIST_FILE = Baisi/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Baisi/Other/QHC.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Baisi/Other/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = QHC.Baisi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -375,10 +519,10 @@
 			baseConfigurationReference = AAD2376BC69302D5111E0809 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/Baisi/QHC.pch";
-				INFOPLIST_FILE = Baisi/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Baisi/Other/QHC.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Baisi/Other/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = QHC.Baisi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -409,12 +553,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F8B41F3F1CD0C51F0037F306 /* Baisi.xcdatamodeld */ = {
+		F8B41F7D1CD1C1230037F306 /* Baisi.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F8B41F401CD0C51F0037F306 /* Baisi.xcdatamodel */,
+				F8B41F7E1CD1C1230037F306 /* Baisi.xcdatamodel */,
 			);
-			currentVersion = F8B41F401CD0C51F0037F306 /* Baisi.xcdatamodel */;
+			currentVersion = F8B41F7E1CD1C1230037F306 /* Baisi.xcdatamodel */;
 			path = Baisi.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -28,7 +28,6 @@
 - (void)friendTriendClick
 {
     QHCTestViewController *testVc = [[QHCTestViewController alloc] init];
-    testVc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:testVc animated:YES];
 
 

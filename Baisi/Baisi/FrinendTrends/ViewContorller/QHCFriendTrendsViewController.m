@@ -7,7 +7,7 @@
 //
 
 #import "QHCFriendTrendsViewController.h"
-
+#import "QHCTestViewController.h"
 @interface QHCFriendTrendsViewController ()
 
 @end
@@ -16,22 +16,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.navigationItem.title = @"关注";
+    
+    UIBarButtonItem *item = [UIBarButtonItem barBtuttonItemImage:@"friendsRecommentIcon" highImage:@"friendsRecommentIcon-click" target:self action:@selector(friendTriendClick)];
+    
+    self.navigationItem.leftBarButtonItem = item;
+    
 }
+
+- (void)friendTriendClick
+{
+    QHCTestViewController *testVc = [[QHCTestViewController alloc] init];
+    testVc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:testVc animated:YES];
+
+
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

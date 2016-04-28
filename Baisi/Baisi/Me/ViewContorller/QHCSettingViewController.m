@@ -19,6 +19,10 @@
 
     
     self.view.backgroundColor = QHCRandom_Color;
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

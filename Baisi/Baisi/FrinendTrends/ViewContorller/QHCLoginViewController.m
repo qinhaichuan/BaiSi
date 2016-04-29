@@ -66,7 +66,6 @@
     textFieldImageV.userInteractionEnabled = NO;
     UIImage *bgImage = [UIImage imageNamed:@"login_rgister_textfield_bg"];
     textFieldImageV.image = bgImage;
-//    textFieldImageV.frame = CGRectMake(screenW/2 - 300.0f*QHCScreen_WRtio/2, pointY, 300.0f*QHCScreen_WRtio, 100.0f*QHCScreen_HRtio);
     textFieldImageV.frame = CGRectMake(screenW/2 - 300.0f*QHCScreen_WRtio/2, 0, 300.0f*QHCScreen_WRtio, 100.0f*QHCScreen_HRtio);
     [self.middleLoginView addSubview:textFieldImageV];
 

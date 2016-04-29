@@ -71,6 +71,7 @@
 
     UITextField *phoneNumTextField = [[UITextField alloc] init];
     phoneNumTextField.placeholder = @"手机号";
+    phoneNumTextField.keyboardType = UIKeyboardTypeNumberPad;
     // 只读属性, 用kvc
     UILabel *placeHolder = [phoneNumTextField valueForKey:@"placeholderLabel"];
     placeHolder.textColor = QHCRandom_Color
@@ -176,6 +177,7 @@
     
     UITextField *phoneNumTextField = [[UITextField alloc] init];
     phoneNumTextField.placeholder = @"请输入手机号";
+    phoneNumTextField.keyboardType = UIKeyboardTypeNumberPad;
     // 只读属性, 用kvc
     UILabel *placeHolder = [phoneNumTextField valueForKey:@"placeholderLabel"];
     placeHolder.textColor = QHCRandom_Color

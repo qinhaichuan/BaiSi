@@ -25,6 +25,7 @@
 		F8B41FA01CD20EE80037F306 /* QHCNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F9F1CD20EE80037F306 /* QHCNavigationViewController.m */; };
 		F8B41FA31CD21A9B0037F306 /* QHCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41FA21CD21A9B0037F306 /* QHCLoginViewController.m */; };
 		F8B41FA61CD21ABA0037F306 /* QHCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41FA51CD21ABA0037F306 /* QHCButton.m */; };
+		F8C835301CD3658A002342DB /* QHCSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C8352F1CD3658A002342DB /* QHCSubTagViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,8 @@
 		F8B41FA21CD21A9B0037F306 /* QHCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCLoginViewController.m; sourceTree = "<group>"; };
 		F8B41FA41CD21ABA0037F306 /* QHCButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCButton.h; sourceTree = "<group>"; };
 		F8B41FA51CD21ABA0037F306 /* QHCButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCButton.m; sourceTree = "<group>"; };
+		F8C8352E1CD3658A002342DB /* QHCSubTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCSubTagViewController.h; sourceTree = "<group>"; };
+		F8C8352F1CD3658A002342DB /* QHCSubTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCSubTagViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +165,8 @@
 			children = (
 				F8B41F661CD1C1230037F306 /* QHCEssenceViewController.h */,
 				F8B41F671CD1C1230037F306 /* QHCEssenceViewController.m */,
+				F8C8352E1CD3658A002342DB /* QHCSubTagViewController.h */,
+				F8C8352F1CD3658A002342DB /* QHCSubTagViewController.m */,
 			);
 			path = ViewContorller;
 			sourceTree = "<group>";
@@ -437,6 +442,7 @@
 				F8B41FA01CD20EE80037F306 /* QHCNavigationViewController.m in Sources */,
 				F8B41F901CD1C1230037F306 /* QHCTabBar.m in Sources */,
 				F8B41F911CD1C1230037F306 /* QHCTabBarVC.m in Sources */,
+				F8C835301CD3658A002342DB /* QHCSubTagViewController.m in Sources */,
 				F8B41F961CD1CBF70037F306 /* QHCSettingViewController.m in Sources */,
 				F8B41F8B1CD1C1230037F306 /* QHCNewViewController.m in Sources */,
 				F8B41F8A1CD1C1230037F306 /* QHCMeViewController.m in Sources */,

@@ -7,7 +7,7 @@
 //
 
 #import "QHCEssenceViewController.h"
-
+#import "QHCSubTagViewController.h"
 @interface QHCEssenceViewController ()
 
 @end
@@ -25,7 +25,10 @@
 
 - (void)mainSubClick
 {
-    QHCLogFunc
+    QHCSubTagViewController *subTagVc = [[QHCSubTagViewController alloc] init];
+    subTagVc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:subTagVc animated:YES];
+    
 
 }
 

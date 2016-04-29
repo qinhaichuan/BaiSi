@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface QHCButton : UIButton
-
+- (instancetype)initWithTitle:(NSString *)title image:(NSString *)image highImage:(NSString *)highImage;
 @end

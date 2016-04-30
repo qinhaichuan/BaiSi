@@ -17,14 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 请求参数
+    [self getData];
+
+}
+
+- (void)getData
+{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"tag_recommend";
     params[@"action"] = @"sub";
     params[@"c"] = @"topic";
     [QHCHttpManger getDataWithDict:params success:^(NSDictionary *responseDict) {
         
-        QHCLog(@"%@", responseDict);
+        QHCLog(@"返回3: %@", responseDict);
         
     } failure:^(NSError *errorMess) {
         
@@ -32,6 +37,7 @@
     }];
 
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -10,11 +10,15 @@
 @implementation QHCShareHttper
 
 static QHCShareHttper * shareHttper;
-+(instancetype)allocWithZone:(struct _NSZone *)zone
+//+(instancetype)allocWithZone:(struct _NSZone *)zone
+//{
+//
+//}
+
++(instancetype)shareHttper
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        shareHttper = [super allocWithZone:zone];
         
         shareHttper = [[self alloc] initWithBaseURL:[NSURL URLWithString:BASE_URL]];
         NSOperationQueue *operaQueue = shareHttper.operationQueue;
@@ -38,19 +42,16 @@ static QHCShareHttper * shareHttper;
     return shareHttper;
 }
 
-+(instancetype)shareHttper
-{
-    return [[self alloc] init];
-}
-
 /**
  *  重写原方法, 加入请求头信息(加密签名)
  */
--(NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters progress:(void (^)(NSProgress * _Nonnull))uploadProgress success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure
-{
-    NSDictionary *dict = [self baseHeaderWithParameters:parameters URLString:URLString type:@"POST"];
-    return [self POST:URLString parameters:dict progress:uploadProgress success:success failure:failure];
-}
+//-(NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters progress:(void (^)(NSProgress * _Nonnull))uploadProgress success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure
+//{
+////    NSDictionary *dict = [self baseHeaderWithParameters:parameters URLString:URLString type:@"POST"];
+////    return [self POST:URLString parameters:dict progress:uploadProgress success:success failure:failure];
+//        return [self POST:URLString parameters:parameters progress:uploadProgress success:success failure:failure];
+//
+//}
 
 /**
  *  修改请求头: 在此方法里面进行加密

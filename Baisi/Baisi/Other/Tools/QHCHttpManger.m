@@ -14,7 +14,7 @@
 +(void)getDataWithDict:(NSDictionary *)parameter success:(void (^)(NSDictionary *responseDict))success failure:(void (^)(NSError *errorMess))failure
 {
     [self getData:parameter success:^(id data) {
-        
+        QHCLog(@"返回2: %@", data);
         success(data);
     } failure:^(NSError *errorMessage) {
         
@@ -26,18 +26,30 @@
 +(void)getData:(NSDictionary *)parameter success:(void (^)(id data))success failure:(void (^)(NSError *errorMessage))failure
 {
     QHCShareHttper *manager = [QHCShareHttper manager];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    [manager.responseSerializer setAcceptableContentTypes:[NSSet setWithObjects:@"application/json",@"text/html", nil]];
-    [manager POST:BASE_URL parameters:parameter progress:^(NSProgress * _Nonnull uploadProgress) {
+//    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+//    [manager.responseSerializer setAcceptableContentTypes:[NSSet setWithObjects:@"application/json",@"text/html", nil]];
+    
+    [manager GET:BASE_URL parameters:parameter progress:^(NSProgress * _Nonnull downloadProgress) {
         
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        QHCLog(@"返回1: %@", responseObject);
         success(responseObject);
-        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        failure(error);
-        
+         failure(error);
     }];
+    
+//    [manager POST:BASE_URL parameters:parameter progress:^(NSProgress * _Nonnull uploadProgress) {
+//        
+//        
+//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        QHCLog(@"返回1: %@", responseObject);
+//        success(responseObject);
+//        
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        failure(error);
+//        
+//    }];
 
 }
 

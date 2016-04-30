@@ -15,9 +15,12 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 #import "UIBarButtonItem+QHCBarButtonItem.h"
+#import "QHCHttpManger.h"
+#import "Definer.h"
 
 
 
+#define BASE_URL @"http://api.budejie.com/api/api_open.php"
 
 
 #ifdef DEBUG

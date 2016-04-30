@@ -17,11 +17,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // 请求参数
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"tag_recommend";
+    params[@"action"] = @"sub";
+    params[@"c"] = @"topic";
+    [QHCHttpManger getDataWithDict:params success:^(NSDictionary *responseDict) {
+        
+        QHCLog(@"%@", responseDict);
+        
+    } failure:^(NSError *errorMess) {
+        
+        
+    }];
+
 }
 
 - (void)didReceiveMemoryWarning {

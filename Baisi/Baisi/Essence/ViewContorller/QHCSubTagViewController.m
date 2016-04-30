@@ -7,8 +7,10 @@
 //
 
 #import "QHCSubTagViewController.h"
-
+#import "QHCSubTagModel.h"
 @interface QHCSubTagViewController ()
+
+@property(nonatomic, strong) NSArray *subTagModelArr;
 
 @end
 
@@ -27,12 +29,28 @@
     params[@"a"] = @"tag_recommend";
     params[@"action"] = @"sub";
     params[@"c"] = @"topic";
+    [SVProgressHUD showWithStatus:@"请求数据中..."];
     [QHCHttpManger getDataWithDict:params success:^(NSDictionary *responseDict) {
+        
+        [SVProgressHUD dismiss];
         
         QHCLog(@"返回3: %@", responseDict);
         
+        if (QHCDict(responseDict)) {
+            
+            self.subTagModelArr = [QHCSubTagModel mj_objectArrayWithKeyValuesArray:responseDict];
+            
+            [self.tableView reloadData];
+        }
+        
+        
     } failure:^(NSError *errorMess) {
         
+        [SVProgressHUD showWithStatus:@"网络请求失败..."];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            
+            [SVProgressHUD dismiss];
+        });
         
     }];
 

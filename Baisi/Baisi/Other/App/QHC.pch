@@ -24,8 +24,8 @@
 //#import <SDWebImage/SDImageCache.h>
 #import <UIImageView+WebCache.h>
 #import "UIImageView+QHCCircleImageView.h"
-
-
+#import "UIView+QHCExtension.h"
+#import <UIButton+WebCache.h>
 
 
 

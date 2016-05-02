@@ -49,6 +49,7 @@
         
         UILabel *subNumLbl = [[UILabel alloc] init];
         subNumLbl.font = [UIFont systemFontOfSize:15];
+        subNumLbl.textColor = [UIColor lightGrayColor];
         self.subNumLbl = subNumLbl;
         [self.contentView addSubview:subNumLbl];
         

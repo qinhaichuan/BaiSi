@@ -12,4 +12,5 @@
 
 @property(nonatomic, strong) QHCSubTagModel *subTagModel;
 
++ (instancetype)cellWithTableView:(UITableView *)tableView;
 @end

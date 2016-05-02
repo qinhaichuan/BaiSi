@@ -35,7 +35,11 @@
 {
     if (self == [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+
+        
         UILabel *themNameLbl = [[UILabel alloc] init];
+        themNameLbl.font = [UIFont systemFontOfSize:15];
         self.themNameLbl = themNameLbl;
         [self.contentView addSubview:themNameLbl];
         
@@ -44,13 +48,18 @@
         [self.contentView addSubview:imageV];
         
         UILabel *subNumLbl = [[UILabel alloc] init];
+        subNumLbl.font = [UIFont systemFontOfSize:15];
         self.subNumLbl = subNumLbl;
         [self.contentView addSubview:subNumLbl];
         
         UIButton *subscribeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        self.subscribeBtn = subscribeBtn;
+        subscribeBtn.titleLabel.font = [UIFont systemFontOfSize:16];
         [subscribeBtn setTitle:@"+订阅" forState:UIControlStateNormal];
-        [subscribeBtn setTintColor:[UIColor redColor]];
+        [subscribeBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [subscribeBtn.layer setCornerRadius:5.0];
+        [subscribeBtn.layer setBorderWidth:1.0];
+        [subscribeBtn.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+        self.subscribeBtn = subscribeBtn;
         [self.contentView addSubview:subscribeBtn];
         
         
@@ -64,8 +73,32 @@
 {
     [super layoutSubviews];
     
+    CGFloat imageX = 30*QHCScreen_WRtio;
+    CGFloat imageY = 10*QHCScreen_HRtio;
+    CGFloat imageW = 60*QHCScreen_WRtio;
+    CGFloat imageH = 60*QHCScreen_HRtio;
+    self.imageListImageV.frame = CGRectMake(imageX, imageY, imageW, imageH);
     
+    CGFloat themNameX = imageX + imageW + 10*QHCScreen_WRtio;
+    CGFloat themNameY = imageY;
+    CGSize themSize = [self.themNameLbl.text sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]}];
+    CGFloat themNameW = themSize.width;
+    CGFloat themNameH = themSize.height;
+    self.themNameLbl.frame = CGRectMake(themNameX, themNameY, themNameW, themNameH);
     
+    CGSize subNumSize = [self.subNumLbl.text sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]}];
+    CGFloat subNumX = themNameX;
+    CGFloat subNumY = imageY + imageH - subNumSize.height;
+    CGFloat subNumW = subNumSize.width;
+    CGFloat subNumH = subNumSize.height;
+    self.subNumLbl.frame = CGRectMake(subNumX, subNumY, subNumW, subNumH);
+    
+    CGSize subBtnSize = [self.subscribeBtn.titleLabel.text sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16]}];
+    CGFloat subBtnX = screenW - subBtnSize.width - 30*QHCScreen_WRtio;
+    CGFloat subBtnY = self.frame.size.height/2 - subBtnSize.height/2;
+    CGFloat subBtnW = subBtnSize.width;
+    CGFloat subBtnH = subBtnSize.height;
+    self.subscribeBtn.frame = CGRectMake(subBtnX, subBtnY, subBtnW, subBtnH);
     
 
 }
@@ -74,9 +107,12 @@
 {
     _subTagModel = subTagModel;
     self.themNameLbl.text = subTagModel.theme_name;
-    self.imageListImageV.image = [UIImage imageNamed:subTagModel.image_list];
-    self.subNumLbl.text = [NSString stringWithFormat:@"%ld", subTagModel.sub_number];
-
+    [self.imageListImageV sd_setImageWithURL:[NSURL URLWithString:subTagModel.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    if (subTagModel.sub_number > 10000) {
+        self.subNumLbl.text = [NSString stringWithFormat:@"%.1f万人订阅", subTagModel.sub_number/1000.0];
+    }else{
+        self.subNumLbl.text = [NSString stringWithFormat:@"%ld人订阅", subTagModel.sub_number];
+    }
 }
 
 
@@ -91,7 +127,8 @@
 
 
 - (void)awakeFromNib {
-    // Initialization code
+
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

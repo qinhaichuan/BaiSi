@@ -14,7 +14,7 @@
 +(void)getDataWithDict:(NSDictionary *)parameter success:(void (^)(NSDictionary *responseDict))success failure:(void (^)(NSError *errorMess))failure
 {
     [self getData:parameter success:^(id data) {
-        QHCLog(@"返回2: %@", data);
+//        QHCLog(@"返回2: %@", data);
         success(data);
     } failure:^(NSError *errorMessage) {
         
@@ -33,7 +33,7 @@
         
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        QHCLog(@"返回1: %@", responseObject);
+//        QHCLog(@"返回1: %@", responseObject);
         success(responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
          failure(error);

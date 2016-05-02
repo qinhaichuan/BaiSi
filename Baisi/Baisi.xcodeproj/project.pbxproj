@@ -10,6 +10,8 @@
 		3650F57EDBE52E4C65FE8880 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D843ECCE28D1F08BC29629 /* libPods.a */; };
 		F87E0A9C1CD4EFB70058B478 /* QHCSubTagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F87E0A9B1CD4EFB70058B478 /* QHCSubTagModel.m */; };
 		F87E0A9F1CD505280058B478 /* QHCSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F87E0A9E1CD505280058B478 /* QHCSubTagCell.m */; };
+		F87E0AAB1CD7309D0058B478 /* UIImage+QHCCircleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F87E0AAA1CD7309D0058B478 /* UIImage+QHCCircleImage.m */; };
+		F87E0AAE1CD7322B0058B478 /* UIImageView+QHCCircleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F87E0AAD1CD7322B0058B478 /* UIImageView+QHCCircleImageView.m */; };
 		F8B41F431CD0C51F0037F306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B41F421CD0C51F0037F306 /* Assets.xcassets */; };
 		F8B41F881CD1C1230037F306 /* QHCEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F671CD1C1230037F306 /* QHCEssenceViewController.m */; };
 		F8B41F891CD1C1230037F306 /* QHCFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F6D1CD1C1230037F306 /* QHCFriendTrendsViewController.m */; };
@@ -40,6 +42,10 @@
 		F87E0A9B1CD4EFB70058B478 /* QHCSubTagModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCSubTagModel.m; sourceTree = "<group>"; };
 		F87E0A9D1CD505280058B478 /* QHCSubTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCSubTagCell.h; sourceTree = "<group>"; };
 		F87E0A9E1CD505280058B478 /* QHCSubTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCSubTagCell.m; sourceTree = "<group>"; };
+		F87E0AA91CD7309D0058B478 /* UIImage+QHCCircleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+QHCCircleImage.h"; sourceTree = "<group>"; };
+		F87E0AAA1CD7309D0058B478 /* UIImage+QHCCircleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+QHCCircleImage.m"; sourceTree = "<group>"; };
+		F87E0AAC1CD7322B0058B478 /* UIImageView+QHCCircleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+QHCCircleImageView.h"; sourceTree = "<group>"; };
+		F87E0AAD1CD7322B0058B478 /* UIImageView+QHCCircleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+QHCCircleImageView.m"; sourceTree = "<group>"; };
 		F8B41F301CD0C51F0037F306 /* Baisi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baisi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B41F421CD0C51F0037F306 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8B41F661CD1C1230037F306 /* QHCEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCEssenceViewController.h; sourceTree = "<group>"; };
@@ -314,6 +320,10 @@
 			children = (
 				F8B41F981CD1CD080037F306 /* UIBarButtonItem+QHCBarButtonItem.h */,
 				F8B41F991CD1CD080037F306 /* UIBarButtonItem+QHCBarButtonItem.m */,
+				F87E0AA91CD7309D0058B478 /* UIImage+QHCCircleImage.h */,
+				F87E0AAA1CD7309D0058B478 /* UIImage+QHCCircleImage.m */,
+				F87E0AAC1CD7322B0058B478 /* UIImageView+QHCCircleImageView.h */,
+				F87E0AAD1CD7322B0058B478 /* UIImageView+QHCCircleImageView.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -481,6 +491,7 @@
 				F8C835301CD3658A002342DB /* QHCSubTagViewController.m in Sources */,
 				F87E0A9F1CD505280058B478 /* QHCSubTagCell.m in Sources */,
 				F8C835481CD4CC40002342DB /* QHCTabBarVC.m in Sources */,
+				F87E0AAE1CD7322B0058B478 /* UIImageView+QHCCircleImageView.m in Sources */,
 				F8B41F961CD1CBF70037F306 /* QHCSettingViewController.m in Sources */,
 				F8B41F8B1CD1C1230037F306 /* QHCNewViewController.m in Sources */,
 				F8C835331CD36ACC002342DB /* QHCHttpManger.m in Sources */,
@@ -488,6 +499,7 @@
 				F8B41F8F1CD1C1230037F306 /* main.m in Sources */,
 				F8C835471CD4CC40002342DB /* QHCTabBar.m in Sources */,
 				F8B41FA31CD21A9B0037F306 /* QHCLoginViewController.m in Sources */,
+				F87E0AAB1CD7309D0058B478 /* UIImage+QHCCircleImage.m in Sources */,
 				F87E0A9C1CD4EFB70058B478 /* QHCSubTagModel.m in Sources */,
 				F8B41F891CD1C1230037F306 /* QHCFriendTrendsViewController.m in Sources */,
 				F8B41FA61CD21ABA0037F306 /* QHCButton.m in Sources */,

@@ -23,7 +23,7 @@
 #import "AppDelegate.h"
 //#import <SDWebImage/SDImageCache.h>
 #import <UIImageView+WebCache.h>
-
+#import "UIImageView+QHCCircleImageView.h"
 
 
 

@@ -107,7 +107,7 @@
 {
     _subTagModel = subTagModel;
     self.themNameLbl.text = subTagModel.theme_name;
-    [self.imageListImageV sd_setImageWithURL:[NSURL URLWithString:subTagModel.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.imageListImageV setCircleImageView:subTagModel.image_list];
     if (subTagModel.sub_number > 10000) {
         self.subNumLbl.text = [NSString stringWithFormat:@"%.1f万人订阅", subTagModel.sub_number/1000.0];
     }else{

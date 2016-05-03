@@ -21,7 +21,7 @@
 
 -(instancetype)initWithFrame:(CGRect)frame
 {
-    if (self == [super initWithFrame:frame]) {
+    if (self = [super initWithFrame:frame]) {
         
         // 请求参数
         NSMutableDictionary *params = [NSMutableDictionary dictionary];
@@ -31,11 +31,12 @@
         [SVProgressHUD showWithStatus:@"数据请求中..."];
         __weak typeof(self) weakSelf = self;
         [QHCHttpManger getDataWithDict:params success:^(NSDictionary *responseDict) {
-            QHCLog(@"%@", responseDict);
+//            QHCLog(@"-----======%@", responseDict);
             [SVProgressHUD dismiss];
             if (responseDict) {
-                weakSelf.squareArr = [QHCSquareModel mj_objectArrayWithKeyValuesArray:responseDict];
+                weakSelf.squareArr = [QHCSquareModel mj_objectArrayWithKeyValuesArray:responseDict[@"square_list"]];
                 
+                QHCLog(@"-----======%@", _squareArr);
                 [weakSelf creatBtn:weakSelf.squareArr];
                 
             }
@@ -63,8 +64,9 @@
         [btn addTarget:self action:@selector(squareBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:btn];
         
-        CGFloat btnX = squareArr.count % columns;
-        CGFloat btnY = squareArr.count / columns;
+        CGFloat btnX = i % columns * btnW;
+        CGFloat btnY = i / columns * btnH;
+    
         btn.frame = CGRectMake(btnX, btnY, btnW, btnH);
         
         btn.squareModel = squareArr[i];

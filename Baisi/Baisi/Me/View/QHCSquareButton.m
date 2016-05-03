@@ -14,7 +14,7 @@
 -(instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        [self setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+        [self setBackgroundImage:[UIImage imageNamed:@"mainCellBackground"] forState:UIControlStateNormal];
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
         self.titleLabel.font = [UIFont systemFontOfSize:16];
         [self setTitleColor: [UIColor blackColor] forState:UIControlStateNormal];
@@ -38,7 +38,7 @@
     _squareModel = squareModel;
     
     [self setTitle:squareModel.name forState:UIControlStateNormal];
-    [self sd_setImageWithURL:[NSURL URLWithString:squareModel.url] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self sd_setImageWithURL:[NSURL URLWithString:squareModel.icon] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     
 
 }

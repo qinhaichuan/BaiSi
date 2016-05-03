@@ -31,6 +31,9 @@
 		F8BCD75C1CD78D95005DD79D /* QHCSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BCD75B1CD78D95005DD79D /* QHCSquareButton.m */; };
 		F8BCD75F1CD78DE2005DD79D /* QHCSquareModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BCD75E1CD78DE2005DD79D /* QHCSquareModel.m */; };
 		F8BCD7621CD7A8D6005DD79D /* QHCWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BCD7611CD7A8D6005DD79D /* QHCWebView.m */; };
+		F8C669531CD896B400944EC5 /* QHCClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C669521CD896B400944EC5 /* QHCClearCacheCell.m */; };
+		F8C669561CD898A300944EC5 /* QHCOtherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C669551CD898A300944EC5 /* QHCOtherCell.m */; };
+		F8C6695C1CD89D8300944EC5 /* NSString+QHCFileSize.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C6695B1CD89D8300944EC5 /* NSString+QHCFileSize.m */; };
 		F8C835301CD3658A002342DB /* QHCSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C8352F1CD3658A002342DB /* QHCSubTagViewController.m */; };
 		F8C835331CD36ACC002342DB /* QHCHttpManger.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C835321CD36ACC002342DB /* QHCHttpManger.m */; };
 		F8C835391CD4A0B8002342DB /* QHCShareHttper.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C835381CD4A0B8002342DB /* QHCShareHttper.m */; };
@@ -87,6 +90,12 @@
 		F8BCD75E1CD78DE2005DD79D /* QHCSquareModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCSquareModel.m; sourceTree = "<group>"; };
 		F8BCD7601CD7A8D6005DD79D /* QHCWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCWebView.h; sourceTree = "<group>"; };
 		F8BCD7611CD7A8D6005DD79D /* QHCWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCWebView.m; sourceTree = "<group>"; };
+		F8C669511CD896B400944EC5 /* QHCClearCacheCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCClearCacheCell.h; sourceTree = "<group>"; };
+		F8C669521CD896B400944EC5 /* QHCClearCacheCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCClearCacheCell.m; sourceTree = "<group>"; };
+		F8C669541CD898A300944EC5 /* QHCOtherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCOtherCell.h; sourceTree = "<group>"; };
+		F8C669551CD898A300944EC5 /* QHCOtherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCOtherCell.m; sourceTree = "<group>"; };
+		F8C6695A1CD89D8300944EC5 /* NSString+QHCFileSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QHCFileSize.h"; sourceTree = "<group>"; };
+		F8C6695B1CD89D8300944EC5 /* NSString+QHCFileSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QHCFileSize.m"; sourceTree = "<group>"; };
 		F8C8352E1CD3658A002342DB /* QHCSubTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCSubTagViewController.h; sourceTree = "<group>"; };
 		F8C8352F1CD3658A002342DB /* QHCSubTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCSubTagViewController.m; sourceTree = "<group>"; };
 		F8C835311CD36ACC002342DB /* QHCHttpManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCHttpManger.h; sourceTree = "<group>"; };
@@ -280,6 +289,10 @@
 				F8BCD74F1CD7466E005DD79D /* QHCMeFooterView.m */,
 				F8BCD75A1CD78D95005DD79D /* QHCSquareButton.h */,
 				F8BCD75B1CD78D95005DD79D /* QHCSquareButton.m */,
+				F8C669511CD896B400944EC5 /* QHCClearCacheCell.h */,
+				F8C669521CD896B400944EC5 /* QHCClearCacheCell.m */,
+				F8C669541CD898A300944EC5 /* QHCOtherCell.h */,
+				F8C669551CD898A300944EC5 /* QHCOtherCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -354,6 +367,8 @@
 				F87E0AAD1CD7322B0058B478 /* UIImageView+QHCCircleImageView.m */,
 				F8BCD7571CD78AB2005DD79D /* UIView+QHCExtension.h */,
 				F8BCD7581CD78AB2005DD79D /* UIView+QHCExtension.m */,
+				F8C6695A1CD89D8300944EC5 /* NSString+QHCFileSize.h */,
+				F8C6695B1CD89D8300944EC5 /* NSString+QHCFileSize.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -530,14 +545,17 @@
 				F8C835471CD4CC40002342DB /* QHCTabBar.m in Sources */,
 				F8B41FA31CD21A9B0037F306 /* QHCLoginViewController.m in Sources */,
 				F87E0AAB1CD7309D0058B478 /* UIImage+QHCCircleImage.m in Sources */,
+				F8C669561CD898A300944EC5 /* QHCOtherCell.m in Sources */,
 				F8BCD75C1CD78D95005DD79D /* QHCSquareButton.m in Sources */,
 				F87E0A9C1CD4EFB70058B478 /* QHCSubTagModel.m in Sources */,
 				F8BCD75F1CD78DE2005DD79D /* QHCSquareModel.m in Sources */,
+				F8C669531CD896B400944EC5 /* QHCClearCacheCell.m in Sources */,
 				F8B41F891CD1C1230037F306 /* QHCFriendTrendsViewController.m in Sources */,
 				F8BCD74D1CD74649005DD79D /* QHCMeCell.m in Sources */,
 				F8B41FA61CD21ABA0037F306 /* QHCButton.m in Sources */,
 				F8C835461CD4CC40002342DB /* QHCNavigationViewController.m in Sources */,
 				F8BCD7591CD78AB2005DD79D /* UIView+QHCExtension.m in Sources */,
+				F8C6695C1CD89D8300944EC5 /* NSString+QHCFileSize.m in Sources */,
 				F8BCD7501CD7466E005DD79D /* QHCMeFooterView.m in Sources */,
 				F8BCD7621CD7A8D6005DD79D /* QHCWebView.m in Sources */,
 				F8B41F9D1CD2059E0037F306 /* QHCTestViewController.m in Sources */,

@@ -48,7 +48,7 @@
 
 - (void)setting
 {
-    QHCSettingViewController *settingVc = [[QHCSettingViewController alloc] init];
+    QHCSettingViewController *settingVc = [[QHCSettingViewController alloc] initWithStyle:UITableViewStyleGrouped];
     settingVc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:settingVc animated:YES];
 

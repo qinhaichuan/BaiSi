@@ -27,6 +27,7 @@
 #define QHCColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)];
 #define QHCRandom_Color [UIColor colorWithRed:arc4random_uniform(255.0f)/255.0f green:arc4random_uniform(255.0f)/255.0f blue:arc4random_uniform(255.0f)/255.0f alpha:1];
 #define QHCColorI(C) [UIColor colorWithRed:((C>>16)&0xff/255.0f) green:((C>>8)&0xff/255.0f) blue:(C&0xff/255.0f) alpha:1.0];
+#define QHCBgColor QHCColor(206, 206, 206, 1)
 
 // 屏幕宽度比例适配
 #define QHCScreen_WRtio [UIScreen mainScreen].bounds.size.width / 414.0f

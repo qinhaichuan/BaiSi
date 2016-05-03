@@ -17,11 +17,49 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self setNav];
+    [self setChildVc];
+    [self addScrollView];
+    [self addTitleView];
+    [self addChildVc];
+
+}
+
+- (void)setNav
+{
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
     
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem barBtuttonItemImage:@"MainTagSubIcon" highImage:@"MainTagSubIconClick" target:self action:@selector(mainSubClick)];
 
 }
+
+- (void)setChildVc
+{
+
+
+}
+
+- (void)addScrollView
+{
+
+
+}
+
+- (void)addTitleView
+{
+
+
+}
+
+- (void)addChildVc
+{
+
+}
+
+
+
+
+
 
 - (void)mainSubClick
 {

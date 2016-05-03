@@ -34,6 +34,11 @@
 		F8C669531CD896B400944EC5 /* QHCClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C669521CD896B400944EC5 /* QHCClearCacheCell.m */; };
 		F8C669561CD898A300944EC5 /* QHCOtherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C669551CD898A300944EC5 /* QHCOtherCell.m */; };
 		F8C6695C1CD89D8300944EC5 /* NSString+QHCFileSize.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C6695B1CD89D8300944EC5 /* NSString+QHCFileSize.m */; };
+		F8C6695F1CD8BE0100944EC5 /* QHCAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C6695E1CD8BE0100944EC5 /* QHCAllViewController.m */; };
+		F8C669621CD8BE5300944EC5 /* QHCVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C669611CD8BE5300944EC5 /* QHCVideoViewController.m */; };
+		F8C669651CD8BE6600944EC5 /* QHCVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C669641CD8BE6600944EC5 /* QHCVoiceViewController.m */; };
+		F8C669681CD8BE7B00944EC5 /* QHCPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C669671CD8BE7B00944EC5 /* QHCPictureViewController.m */; };
+		F8C6696B1CD8BE8A00944EC5 /* QHCWordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C6696A1CD8BE8A00944EC5 /* QHCWordsViewController.m */; };
 		F8C835301CD3658A002342DB /* QHCSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C8352F1CD3658A002342DB /* QHCSubTagViewController.m */; };
 		F8C835331CD36ACC002342DB /* QHCHttpManger.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C835321CD36ACC002342DB /* QHCHttpManger.m */; };
 		F8C835391CD4A0B8002342DB /* QHCShareHttper.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C835381CD4A0B8002342DB /* QHCShareHttper.m */; };
@@ -96,6 +101,16 @@
 		F8C669551CD898A300944EC5 /* QHCOtherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCOtherCell.m; sourceTree = "<group>"; };
 		F8C6695A1CD89D8300944EC5 /* NSString+QHCFileSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QHCFileSize.h"; sourceTree = "<group>"; };
 		F8C6695B1CD89D8300944EC5 /* NSString+QHCFileSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QHCFileSize.m"; sourceTree = "<group>"; };
+		F8C6695D1CD8BE0100944EC5 /* QHCAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCAllViewController.h; sourceTree = "<group>"; };
+		F8C6695E1CD8BE0100944EC5 /* QHCAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCAllViewController.m; sourceTree = "<group>"; };
+		F8C669601CD8BE5300944EC5 /* QHCVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCVideoViewController.h; sourceTree = "<group>"; };
+		F8C669611CD8BE5300944EC5 /* QHCVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCVideoViewController.m; sourceTree = "<group>"; };
+		F8C669631CD8BE6600944EC5 /* QHCVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCVoiceViewController.h; sourceTree = "<group>"; };
+		F8C669641CD8BE6600944EC5 /* QHCVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCVoiceViewController.m; sourceTree = "<group>"; };
+		F8C669661CD8BE7B00944EC5 /* QHCPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCPictureViewController.h; sourceTree = "<group>"; };
+		F8C669671CD8BE7B00944EC5 /* QHCPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCPictureViewController.m; sourceTree = "<group>"; };
+		F8C669691CD8BE8A00944EC5 /* QHCWordsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCWordsViewController.h; sourceTree = "<group>"; };
+		F8C6696A1CD8BE8A00944EC5 /* QHCWordsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCWordsViewController.m; sourceTree = "<group>"; };
 		F8C8352E1CD3658A002342DB /* QHCSubTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCSubTagViewController.h; sourceTree = "<group>"; };
 		F8C8352F1CD3658A002342DB /* QHCSubTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCSubTagViewController.m; sourceTree = "<group>"; };
 		F8C835311CD36ACC002342DB /* QHCHttpManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCHttpManger.h; sourceTree = "<group>"; };
@@ -218,6 +233,16 @@
 				F8B41F671CD1C1230037F306 /* QHCEssenceViewController.m */,
 				F8C8352E1CD3658A002342DB /* QHCSubTagViewController.h */,
 				F8C8352F1CD3658A002342DB /* QHCSubTagViewController.m */,
+				F8C6695D1CD8BE0100944EC5 /* QHCAllViewController.h */,
+				F8C6695E1CD8BE0100944EC5 /* QHCAllViewController.m */,
+				F8C669601CD8BE5300944EC5 /* QHCVideoViewController.h */,
+				F8C669611CD8BE5300944EC5 /* QHCVideoViewController.m */,
+				F8C669631CD8BE6600944EC5 /* QHCVoiceViewController.h */,
+				F8C669641CD8BE6600944EC5 /* QHCVoiceViewController.m */,
+				F8C669661CD8BE7B00944EC5 /* QHCPictureViewController.h */,
+				F8C669671CD8BE7B00944EC5 /* QHCPictureViewController.m */,
+				F8C669691CD8BE8A00944EC5 /* QHCWordsViewController.h */,
+				F8C6696A1CD8BE8A00944EC5 /* QHCWordsViewController.m */,
 			);
 			path = ViewContorller;
 			sourceTree = "<group>";
@@ -535,19 +560,24 @@
 				F8B41F8D1CD1C1230037F306 /* Baisi.xcdatamodeld in Sources */,
 				F8C835301CD3658A002342DB /* QHCSubTagViewController.m in Sources */,
 				F87E0A9F1CD505280058B478 /* QHCSubTagCell.m in Sources */,
+				F8C6695F1CD8BE0100944EC5 /* QHCAllViewController.m in Sources */,
 				F8C835481CD4CC40002342DB /* QHCTabBarVC.m in Sources */,
 				F87E0AAE1CD7322B0058B478 /* UIImageView+QHCCircleImageView.m in Sources */,
 				F8B41F961CD1CBF70037F306 /* QHCSettingViewController.m in Sources */,
 				F8B41F8B1CD1C1230037F306 /* QHCNewViewController.m in Sources */,
 				F8C835331CD36ACC002342DB /* QHCHttpManger.m in Sources */,
 				F8B41F8A1CD1C1230037F306 /* QHCMeViewController.m in Sources */,
+				F8C669621CD8BE5300944EC5 /* QHCVideoViewController.m in Sources */,
 				F8B41F8F1CD1C1230037F306 /* main.m in Sources */,
 				F8C835471CD4CC40002342DB /* QHCTabBar.m in Sources */,
 				F8B41FA31CD21A9B0037F306 /* QHCLoginViewController.m in Sources */,
 				F87E0AAB1CD7309D0058B478 /* UIImage+QHCCircleImage.m in Sources */,
+				F8C6696B1CD8BE8A00944EC5 /* QHCWordsViewController.m in Sources */,
+				F8C669681CD8BE7B00944EC5 /* QHCPictureViewController.m in Sources */,
 				F8C669561CD898A300944EC5 /* QHCOtherCell.m in Sources */,
 				F8BCD75C1CD78D95005DD79D /* QHCSquareButton.m in Sources */,
 				F87E0A9C1CD4EFB70058B478 /* QHCSubTagModel.m in Sources */,
+				F8C669651CD8BE6600944EC5 /* QHCVoiceViewController.m in Sources */,
 				F8BCD75F1CD78DE2005DD79D /* QHCSquareModel.m in Sources */,
 				F8C669531CD896B400944EC5 /* QHCClearCacheCell.m in Sources */,
 				F8B41F891CD1C1230037F306 /* QHCFriendTrendsViewController.m in Sources */,

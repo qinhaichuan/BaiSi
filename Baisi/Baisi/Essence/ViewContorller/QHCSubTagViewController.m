@@ -41,13 +41,13 @@
         if (responseDict) {
             
             self.subTagModelArr = [QHCSubTagModel mj_objectArrayWithKeyValuesArray:responseDict];
-            QHCLog(@"=======%@", self.subTagModelArr);
+//            QHCLog(@"=======%@", self.subTagModelArr);
             [self.tableView reloadData];
         }
         
         
     } failure:^(NSError *errorMess) {
-        [SVProgressHUD showErrorWithStatus:@"网络请求失败"];
+//        [SVProgressHUD showErrorWithStatus:@"网络请求失败"];
         [SVProgressHUD showWithStatus:@"网络请求失败..."];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             

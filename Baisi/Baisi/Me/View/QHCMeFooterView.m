@@ -72,7 +72,7 @@
         btn.squareModel = squareArr[i];
 
     }
-    self.height = CGRectGetMaxY(self.subviews.lastObject.frame);
+    self.height = CGRectGetMaxY(self.subviews.lastObject.frame)-20*QHCScreen_HRtio;
     
     UITableView *tableView = (UITableView *)self.superview;
     tableView.tableFooterView = self;

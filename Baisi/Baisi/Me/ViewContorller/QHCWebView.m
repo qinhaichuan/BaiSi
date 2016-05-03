@@ -8,7 +8,7 @@
 
 #import "QHCWebView.h"
 
-@interface QHCWebView()
+@interface QHCWebView()<UIWebViewDelegate>
 
 @property(nonatomic, strong) UIWebView *webV;
 
@@ -21,27 +21,16 @@
 {
     [super viewDidLoad];
     
-//    UIWebView *webV = [[UIWebView alloc] init];
-//    self.webV = webV;
-//    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.url]];
-//    [webV loadRequest:request];
-////    webV.backgroundColor = [UIColor redColor];
-//    [self.view addSubview:webV];
-//    
+    UIWebView *webV = [[UIWebView alloc] init];
+    webV.frame = self.view.bounds;
+    self.webV = webV;
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.url]];
+    [webV loadRequest:request];
+    webV.backgroundColor = [UIColor redColor];
+    [self.view addSubview:webV];
+
     
 }
 
--(UIWebView *)webV
-{
-    if (!_webV) {
-        _webV = [[UIWebView alloc] init];
-        _webV.frame = self.view.bounds;
-        NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:self.url]];
-        [_webV loadRequest:req];
-        [self.view addSubview:_webV];
-
-    }
-    return _webV;
-}
 
 @end

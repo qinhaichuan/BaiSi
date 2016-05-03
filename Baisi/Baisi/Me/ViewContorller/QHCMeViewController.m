@@ -35,8 +35,9 @@
 {
     self.tableView.sectionHeaderHeight = 0;
     self.tableView.sectionFooterHeight = 10*QHCScreen_HRtio;
-    self.tableView.contentInset = UIEdgeInsetsMake(10*QHCScreen_HRtio, 0, 0, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(-25*QHCScreen_HRtio, 0, 0, 0);
     self.tableView.backgroundColor = QHCColor(206, 206, 206, 1);
+    self.tableView.tableFooterView = [[QHCMeFooterView alloc] init];
 }
 
 - (void)moonClick
@@ -64,10 +65,10 @@
     return 2;
 }
 
--(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    return [[QHCMeFooterView alloc] init];
-}
+//-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+//{
+//    return [[QHCMeFooterView alloc] init];
+//}
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

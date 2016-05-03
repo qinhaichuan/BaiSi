@@ -15,9 +15,12 @@
 {
     if (self = [super initWithFrame:frame]) {
         [self setBackgroundImage:[UIImage imageNamed:@"mainCellBackground"] forState:UIControlStateNormal];
+//        [self setBackgroundImage:[UIImage imageNamed:@"mainCellBackground"] forState:UIControlStateHighlighted];
+        [self setAdjustsImageWhenHighlighted:NO];
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
         self.titleLabel.font = [UIFont systemFontOfSize:16];
         [self setTitleColor: [UIColor blackColor] forState:UIControlStateNormal];
+        
         
     }
     return self;

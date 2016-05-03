@@ -46,7 +46,7 @@
 
 - (void)setChildVC
 {
-    [self setOneChildVc:[[QHCNavigationViewController alloc] initWithRootViewController:[[QHCMeViewController alloc] init]] Title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+    [self setOneChildVc:[[QHCNavigationViewController alloc] initWithRootViewController:[[QHCMeViewController alloc] initWithStyle:UITableViewStyleGrouped]] Title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
 
     [self setOneChildVc:[[QHCNavigationViewController alloc] initWithRootViewController:[[QHCEssenceViewController alloc] init]] Title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
     [self setOneChildVc:[[QHCNavigationViewController alloc] initWithRootViewController:[[QHCFriendTrendsViewController alloc] init]] Title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
@@ -60,7 +60,7 @@
     VC.tabBarItem.title = title;
     VC.tabBarItem.image = [UIImage imageNamed:image];
     VC.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
-    VC.view.backgroundColor = QHCRandom_Color;
+//    VC.view.backgroundColor = QHCRandom_Color;
     [self addChildViewController:VC];
 
 }

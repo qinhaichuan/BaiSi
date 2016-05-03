@@ -36,7 +36,7 @@
             if (responseDict) {
                 weakSelf.squareArr = [QHCSquareModel mj_objectArrayWithKeyValuesArray:responseDict[@"square_list"]];
                 
-                QHCLog(@"-----======%@", _squareArr);
+//                QHCLog(@"-----======%@", _squareArr);
                 [weakSelf creatBtn:weakSelf.squareArr];
                 
             }
@@ -86,10 +86,11 @@
     if ([url hasPrefix:@"mod://"]) {
         if ([url hasSuffix:@"BDJ_To_Check"]) {
             // 跳转到check控制器
-            
+            QHCLogFunc
         }else if ([url hasSuffix:@"App_To_SearchUser"]){
             
             // 跳转到另一控制器
+            QHCLogFunc
         }
         
     }else if ([url hasPrefix:@"http://"]){

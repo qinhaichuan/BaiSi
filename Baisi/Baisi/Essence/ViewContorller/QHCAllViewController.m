@@ -10,4 +10,10 @@
 
 @implementation QHCAllViewController
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.view.backgroundColor = QHCRandom_Color
+}
+
 @end

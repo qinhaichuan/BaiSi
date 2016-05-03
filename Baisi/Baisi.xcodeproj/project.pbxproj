@@ -39,6 +39,7 @@
 		F8C669651CD8BE6600944EC5 /* QHCVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C669641CD8BE6600944EC5 /* QHCVoiceViewController.m */; };
 		F8C669681CD8BE7B00944EC5 /* QHCPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C669671CD8BE7B00944EC5 /* QHCPictureViewController.m */; };
 		F8C6696B1CD8BE8A00944EC5 /* QHCWordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C6696A1CD8BE8A00944EC5 /* QHCWordsViewController.m */; };
+		F8C6696E1CD8DD3A00944EC5 /* QHCBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C6696D1CD8DD3A00944EC5 /* QHCBtn.m */; };
 		F8C835301CD3658A002342DB /* QHCSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C8352F1CD3658A002342DB /* QHCSubTagViewController.m */; };
 		F8C835331CD36ACC002342DB /* QHCHttpManger.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C835321CD36ACC002342DB /* QHCHttpManger.m */; };
 		F8C835391CD4A0B8002342DB /* QHCShareHttper.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C835381CD4A0B8002342DB /* QHCShareHttper.m */; };
@@ -111,6 +112,8 @@
 		F8C669671CD8BE7B00944EC5 /* QHCPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCPictureViewController.m; sourceTree = "<group>"; };
 		F8C669691CD8BE8A00944EC5 /* QHCWordsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCWordsViewController.h; sourceTree = "<group>"; };
 		F8C6696A1CD8BE8A00944EC5 /* QHCWordsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCWordsViewController.m; sourceTree = "<group>"; };
+		F8C6696C1CD8DD3A00944EC5 /* QHCBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCBtn.h; sourceTree = "<group>"; };
+		F8C6696D1CD8DD3A00944EC5 /* QHCBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCBtn.m; sourceTree = "<group>"; };
 		F8C8352E1CD3658A002342DB /* QHCSubTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCSubTagViewController.h; sourceTree = "<group>"; };
 		F8C8352F1CD3658A002342DB /* QHCSubTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCSubTagViewController.m; sourceTree = "<group>"; };
 		F8C835311CD36ACC002342DB /* QHCHttpManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCHttpManger.h; sourceTree = "<group>"; };
@@ -222,6 +225,8 @@
 			children = (
 				F87E0A9D1CD505280058B478 /* QHCSubTagCell.h */,
 				F87E0A9E1CD505280058B478 /* QHCSubTagCell.m */,
+				F8C6696C1CD8DD3A00944EC5 /* QHCBtn.h */,
+				F8C6696D1CD8DD3A00944EC5 /* QHCBtn.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -567,6 +572,7 @@
 				F8B41F8B1CD1C1230037F306 /* QHCNewViewController.m in Sources */,
 				F8C835331CD36ACC002342DB /* QHCHttpManger.m in Sources */,
 				F8B41F8A1CD1C1230037F306 /* QHCMeViewController.m in Sources */,
+				F8C6696E1CD8DD3A00944EC5 /* QHCBtn.m in Sources */,
 				F8C669621CD8BE5300944EC5 /* QHCVideoViewController.m in Sources */,
 				F8B41F8F1CD1C1230037F306 /* main.m in Sources */,
 				F8C835471CD4CC40002342DB /* QHCTabBar.m in Sources */,

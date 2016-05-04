@@ -14,6 +14,7 @@
 #import "QHCPictureViewController.h"
 #import "QHCWordsViewController.h"
 #import "QHCBtn.h"
+
 @interface QHCEssenceViewController ()<UIScrollViewDelegate>
 
 @property(nonatomic, weak) UIScrollView *scrollView;

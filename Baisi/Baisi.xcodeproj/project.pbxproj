@@ -47,6 +47,7 @@
 		F8C835461CD4CC40002342DB /* QHCNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C835411CD4CC40002342DB /* QHCNavigationViewController.m */; };
 		F8C835471CD4CC40002342DB /* QHCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C835431CD4CC40002342DB /* QHCTabBar.m */; };
 		F8C835481CD4CC40002342DB /* QHCTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C835451CD4CC40002342DB /* QHCTabBarVC.m */; };
+		F8D5EA0D1CD9916C00ED51F2 /* QHCTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D5EA0C1CD9916C00ED51F2 /* QHCTopicCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +131,8 @@
 		F8C835441CD4CC40002342DB /* QHCTabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCTabBarVC.h; sourceTree = "<group>"; };
 		F8C835451CD4CC40002342DB /* QHCTabBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCTabBarVC.m; sourceTree = "<group>"; };
 		F8C835491CD4CCC7002342DB /* Definer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Definer.h; sourceTree = "<group>"; };
+		F8D5EA0B1CD9916C00ED51F2 /* QHCTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCTopicCell.h; sourceTree = "<group>"; };
+		F8D5EA0C1CD9916C00ED51F2 /* QHCTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCTopicCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +230,8 @@
 				F87E0A9E1CD505280058B478 /* QHCSubTagCell.m */,
 				F8C6696C1CD8DD3A00944EC5 /* QHCBtn.h */,
 				F8C6696D1CD8DD3A00944EC5 /* QHCBtn.m */,
+				F8D5EA0B1CD9916C00ED51F2 /* QHCTopicCell.h */,
+				F8D5EA0C1CD9916C00ED51F2 /* QHCTopicCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -566,6 +571,7 @@
 				F8C835301CD3658A002342DB /* QHCSubTagViewController.m in Sources */,
 				F87E0A9F1CD505280058B478 /* QHCSubTagCell.m in Sources */,
 				F8C6695F1CD8BE0100944EC5 /* QHCAllViewController.m in Sources */,
+				F8D5EA0D1CD9916C00ED51F2 /* QHCTopicCell.m in Sources */,
 				F8C835481CD4CC40002342DB /* QHCTabBarVC.m in Sources */,
 				F87E0AAE1CD7322B0058B478 /* UIImageView+QHCCircleImageView.m in Sources */,
 				F8B41F961CD1CBF70037F306 /* QHCSettingViewController.m in Sources */,

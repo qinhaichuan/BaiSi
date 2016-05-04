@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class QHCTopicModel;
 @interface QHCTopicCell : UITableViewCell
+
+@property(nonatomic, strong) QHCTopicModel *topicModel;
+
++(instancetype)cellWith:(UITableView *)tableView;
 
 @end

@@ -10,4 +10,18 @@
 
 @implementation QHCTopicModel
 
+//-(NSString *)created_at
+//{
+//   // 从服务器返回的时间
+//    NSDateFormatter *matter = [[NSDateFormatter alloc] init];
+//    matter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+//    NSDate *creatAtData = [matter dateFromString:_created_at];
+//    
+//    if (creatAtData.) {
+//        <#statements#>
+//    }
+//
+//
+//}
+
 @end

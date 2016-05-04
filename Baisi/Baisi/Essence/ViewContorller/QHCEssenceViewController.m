@@ -81,7 +81,7 @@
 {
     UIScrollView *scrollerView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     self.scrollView = scrollerView;
-    scrollerView.contentSize = CGSizeMake(screenW * self.childViewControllers.count, screenH);
+    scrollerView.contentSize = CGSizeMake(screenW * self.childViewControllers.count, 0);
     scrollerView.pagingEnabled = YES;
     scrollerView.delegate = self;
     [self.view addSubview:scrollerView];

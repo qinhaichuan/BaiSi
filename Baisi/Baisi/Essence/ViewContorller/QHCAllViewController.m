@@ -40,9 +40,10 @@
 - (void)setupTable
 {
     self.tableView.backgroundColor = QHCBgColor
-    self.tableView.rowHeight = 100*QHCScreen_HRtio;
-    
-
+    self.tableView.rowHeight = 150*QHCScreen_HRtio;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.contentInset = UIEdgeInsetsMake(45*QHCScreen_HRtio, 0, 50*QHCScreen_HRtio, 0);
+    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
 }
 
 - (void)setupRefresh
@@ -60,18 +61,18 @@
     params[@"type"] = @"1";
     params[@"c"] = @"data";
     
-//    [SVProgressHUD showWithStatus:@"正在加载..."];
+    [SVProgressHUD showWithStatus:@"正在加载..."];
     __weak typeof(self) weakSelf = self;
     [QHCHttpManger getDataWithDict:params success:^(NSDictionary *responseDict) {
-//        [SVProgressHUD dismiss];
+        [SVProgressHUD dismiss];
         QHCLog(@"==--------===%@", responseDict);
         if (QHCDict(responseDict)) {
             weakSelf.maxTime = responseDict[@"info"][@"maxtime"];
             weakSelf.topicModelArr = [QHCTopicModel mj_objectArrayWithKeyValuesArray:responseDict[@"list"]];
             
-            [weakSelf.tableView reloadData];
         }
         
+        [weakSelf.tableView reloadData];
         [weakSelf.tableView.mj_header endRefreshing];
     } failure:^(NSError *errorMess) {
         [weakSelf.tableView.mj_header endRefreshing];
@@ -95,15 +96,18 @@
     params[@"c"] = @"data";
     params[@"maxtime"] = self.maxTime;
     
+    [SVProgressHUD showWithStatus:@"正在加载..."];
+
     __weak typeof(self) weakSelf = self;
     [QHCHttpManger getDataWithDict:params success:^(NSDictionary *responseDict) {
         QHCLog(@"++========++%@", responseDict);
+        [SVProgressHUD dismiss];
         if (QHCDict(responseDict)) {
-            NSArray *moreArr = [QHCTopicModel mj_objectArrayWithKeyValuesArray:responseDict[@"list"]];
+            NSMutableArray *moreArr = [QHCTopicModel mj_objectArrayWithKeyValuesArray:responseDict[@"list"]];
             [weakSelf.topicModelArr addObjectsFromArray:moreArr];
         }
         
-        
+        [weakSelf.tableView reloadData];
         [weakSelf.tableView.mj_footer endRefreshing];
     } failure:^(NSError *errorMess) {
         [weakSelf.tableView.mj_footer endRefreshing];
@@ -115,6 +119,7 @@
 
 
 #pragma mark ----- UITableViewDataSource
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.topicModelArr.count;
@@ -122,7 +127,9 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [QHCTopicCell cellWith:tableView];
+    QHCTopicCell *cell = [QHCTopicCell cellWith:tableView];
+    cell.topicModel = self.topicModelArr[indexPath.row];
+    return cell;
 }
 
 

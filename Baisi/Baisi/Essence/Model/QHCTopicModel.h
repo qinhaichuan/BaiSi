@@ -72,10 +72,10 @@ typedef enum : NSUInteger {
 @property(nonatomic, copy) NSString *profile_image;
 @property(nonatomic, copy) NSString *text;
 @property(nonatomic, copy) NSString *created_at;
-@property(nonatomic, assign) NSInteger *ding;
-@property(nonatomic, assign) NSInteger *cai;
-@property(nonatomic, assign) NSInteger *repost;
-@property(nonatomic, assign) NSInteger *comment;
+@property(nonatomic, assign) NSInteger ding;
+@property(nonatomic, assign) NSInteger cai;
+@property(nonatomic, assign) NSInteger repost;
+@property(nonatomic, assign) NSInteger comment;
 @property(nonatomic, assign) QHCTopicType *topicTpye;
 
 

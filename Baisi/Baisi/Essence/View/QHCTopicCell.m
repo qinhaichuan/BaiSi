@@ -22,6 +22,8 @@
 @property(nonatomic, weak) UIButton *moreBtn;
 @property(nonatomic, weak) UIImageView *bottomLine;
 @property(nonatomic, strong) NSMutableArray *btnLineArr;
+@property(nonatomic, weak) UILabel *topCmtLbl;
+@property(nonatomic, weak) UILabel *cmtLbl;
 @property(nonatomic, assign) QHCTopicType *topicTpye;
 
 @end
@@ -72,11 +74,40 @@
         self.createdAtLbl = creatAtLbl;
         [self.contentView addSubview:creatAtLbl];
         
+        UIButton *moreBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.moreBtn = moreBtn;
+        [moreBtn setBackgroundImage:[UIImage imageNamed:@"cellmorebtnnormal"] forState:UIControlStateNormal];
+        [moreBtn setBackgroundImage:[UIImage imageNamed:@"cellmorebtnclick"] forState:UIControlStateHighlighted];
+        [moreBtn addTarget:self action:@selector(moreClick) forControlEvents:UIControlEventTouchUpInside];
+        [self.contentView addSubview:moreBtn];
+        
         UILabel *textLbl = [[UILabel alloc] init];
         self.textLbl = textLbl;
+//        textLbl.backgroundColor = QHCRandom_Color
         textLbl.numberOfLines = 0;
         textLbl.font = [UIFont systemFontOfSize:14];
         [self.contentView addSubview:textLbl];
+        
+        
+//        if (self.topicModel.top_cmt.count) {
+        
+            UILabel *topCmtLbl = [[UILabel alloc] init];
+            self.topCmtLbl = topCmtLbl;
+            topCmtLbl.text = @"最热评论";
+            topCmtLbl.font = [UIFont systemFontOfSize:14];
+            topCmtLbl.backgroundColor = [UIColor yellowColor];
+            [self.contentView addSubview:topCmtLbl];
+            
+            UILabel *cmtLbl = [[UILabel alloc] init];
+            self.cmtLbl = cmtLbl;
+            cmtLbl.numberOfLines = 0;
+            cmtLbl.backgroundColor = [UIColor greenColor];
+            cmtLbl.textColor = [UIColor magentaColor];
+            cmtLbl.font = [UIFont systemFontOfSize:12];
+            [self.contentView addSubview:cmtLbl];
+            
+//        }
+
         
         
         UIButton *dingBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -110,12 +141,6 @@
         }
         
         
-        UIButton *moreBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        self.moreBtn = moreBtn;
-        [moreBtn setBackgroundImage:[UIImage imageNamed:@"cellmorebtnnormal"] forState:UIControlStateNormal];
-        [moreBtn setBackgroundImage:[UIImage imageNamed:@"cellmorebtnclick"] forState:UIControlStateHighlighted];
-        [moreBtn addTarget:self action:@selector(moreClick) forControlEvents:UIControlEventTouchUpInside];
-        [self.contentView addSubview:moreBtn];
         
 
         
@@ -153,11 +178,25 @@
     CGSize textLblSize = [self.textLbl.text boundingRectWithSize:CGSizeMake(self.width - 20*QHCScreen_WRtio, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size;
     self.textLbl.frame = CGRectMake(10*QHCScreen_WRtio, CGRectGetMaxY(self.profileImageView.frame) + 10.0*QHCScreen_HRtio, textLblSize.width, textLblSize.height);
     
+//    CGFloat topCmtX = 10*QHCScreen_WRtio;
+//    CGFloat topCmtY = 0;
+//    CGFloat topCmt
+    
+    if (self.topicModel.top_cmt.count) {
+    
+        CGSize topCmtSize = [self.topCmtLbl.text sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}];
+        
+        self.topCmtLbl.frame = CGRectMake(10*QHCScreen_WRtio, CGRectGetMaxY(self.textLbl.frame), topCmtSize.width, topCmtSize.height);
+        
+        CGSize cmtLblSize = [self.cmtLbl.text boundingRectWithSize:CGSizeMake(self.width - 20*QHCScreen_WRtio, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12]} context:nil].size;
+        self.cmtLbl.frame = CGRectMake(10*QHCScreen_WRtio, CGRectGetMaxY(self.topCmtLbl.frame), cmtLblSize.width, cmtLblSize.height);
+        
+    }
     
     
     CGFloat btnW = self.width/4;
     CGFloat btnH = 35*QHCScreen_HRtio;
-    CGFloat btnY = CGRectGetMaxY(self.textLbl.frame) + 10*QHCScreen_HRtio;
+    CGFloat btnY = CGRectGetMaxY(self.textLbl.frame) + self.topCmtLbl.height + self.cmtLbl.height + 10*QHCScreen_HRtio;
     
     self.bottomLine.frame = CGRectMake(0, btnY + 1.0*QHCScreen_HRtio, self.width, 1.0*QHCScreen_HRtio);
     
@@ -173,19 +212,19 @@
         
     }
     
-    self.height = CGRectGetMaxY(self.commentBtn.frame);
+//    self.height = CGRectGetMaxY(self.commentBtn.frame);
 
 //    self.height = 100;
 
 }
 
-//-(void)setFrame:(CGRect)frame
-//{
-//    frame.origin.y += 10*QHCScreen_HRtio;
-//    frame.size.height -= 10*QHCScreen_HRtio;
-//    [super setFrame:frame];
-//
-//}
+-(void)setFrame:(CGRect)frame
+{
+    frame.origin.y += 10*QHCScreen_HRtio;
+    frame.size.height -= 10*QHCScreen_HRtio;
+    [super setFrame:frame];
+
+}
 
 
 -(void)setTopicModel:(QHCTopicModel *)topicModel
@@ -196,6 +235,15 @@
     self.nameLbl.text = topicModel.name;
     self.createdAtLbl.text = topicModel.created_at;
     self.textLbl.text = topicModel.text;
+    
+    if (topicModel.top_cmt.count) {
+        
+        NSDictionary *dict = topicModel.top_cmt.firstObject;
+        NSString *comment = dict[@"content"];
+        NSString *userName = dict[@"user"][@"username"];
+        self.cmtLbl.text = [NSString stringWithFormat:@"%@:%@", userName, comment];
+        
+    }
     
     [self setBtn:self.dingBtn titlle:@"顶" number:topicModel.ding];
     [self setBtn:self.caiBtn titlle:@"踩" number:topicModel.cai];

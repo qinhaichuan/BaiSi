@@ -68,6 +68,40 @@ typedef enum : NSUInteger {
  
  */
 
+
+/*
+ 最热评论
+ "top_cmt" = (
+    {
+         content = "\U4f60\U518d\U8fd9\U6837\U8086\U65e0\U5fcc\U60ee\U7684\U8bf4\U5927\U5b9e\U8bdd\U6211\U53ef\U8a00\U70b9\U8d5e\U4e86";
+         ctime = "2016-05-04 22:03:11";
+         "data_id" = 18360753;
+         id = 50729664;
+         "like_count" = 499;
+         precid = 0;
+         precmt = ( );
+         preuid = 0;
+         status = 0;
+ 
+         user =  {
+             id = 15702078;
+             "is_vip" = 0;
+             "personal_page" = "http://t.qq.com/a77442111/";
+             "profile_image" = "http://app.qlogo.cn/mbloghead/6188aded58410c98d24c/50";
+             "qq_uid" = a77442111;
+             "qzone_uid" = "";
+             sex = m;
+             username = "\U674e\U6676P7K";
+             "weibo_uid" = "";
+         };
+ 
+         voicetime = 0;
+         voiceuri = "";
+     }
+ );
+ */
+
+
 @property(nonatomic, copy) NSString *name;
 @property(nonatomic, copy) NSString *profile_image;
 @property(nonatomic, copy) NSString *text;
@@ -76,6 +110,7 @@ typedef enum : NSUInteger {
 @property(nonatomic, assign) NSInteger cai;
 @property(nonatomic, assign) NSInteger repost;
 @property(nonatomic, assign) NSInteger comment;
+@property(nonatomic, strong) NSArray *top_cmt;
 @property(nonatomic, assign) QHCTopicType *topicTpye;
 
 

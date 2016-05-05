@@ -40,9 +40,9 @@
 - (void)setupTable
 {
     self.tableView.backgroundColor = QHCBgColor
-    self.tableView.rowHeight = 150*QHCScreen_HRtio;
+    self.tableView.rowHeight = 200*QHCScreen_HRtio;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.contentInset = UIEdgeInsetsMake(45*QHCScreen_HRtio, 0, 50*QHCScreen_HRtio, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(35*QHCScreen_HRtio, 0, 50*QHCScreen_HRtio, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
 }
 

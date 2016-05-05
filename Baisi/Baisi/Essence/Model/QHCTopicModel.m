@@ -86,6 +86,7 @@
         }
         self.centerFrame = CGRectMake(centerX, centerY, centerW, centerH);
         
+        
     }else{
         self.isWord = YES;
         
@@ -103,12 +104,7 @@
         
         CGSize topCmtSize = [@"最热评论" sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}];
         
-        if (self.isWord) {
-             self.topCmtLblFrame = CGRectMake(10*QHCScreen_WRtio, CGRectGetMaxY(self.textLblFrame), topCmtSize.width, topCmtSize.height);
-        }else{
-            self.topCmtLblFrame = CGRectMake(10*QHCScreen_WRtio, CGRectGetMaxY(self.centerFrame), topCmtSize.width, topCmtSize.height);
-        }
-        
+        self.topCmtLblFrame = CGRectMake(10*QHCScreen_WRtio, self.isWord ? CGRectGetMaxY(self.textLblFrame) :CGRectGetMaxY(self.centerFrame), topCmtSize.width, topCmtSize.height);
         
         CGSize cmtLblSize = [cmtText boundingRectWithSize:CGSizeMake(screenW - 20*QHCScreen_WRtio, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12]} context:nil].size;
         self.cmtLbFrame = CGRectMake(10*QHCScreen_WRtio, CGRectGetMaxY(self.topCmtLblFrame), cmtLblSize.width, cmtLblSize.height);
@@ -118,9 +114,11 @@
     
     CGFloat btnW = screenW/4;
     CGFloat btnH = 35*QHCScreen_HRtio;
-    CGFloat btnY = CGRectGetMaxY(self.textLblFrame) + self.topCmtLblFrame.size.height  + self.cmtLbFrame.size.height + 10*QHCScreen_HRtio;
+//    CGFloat btnY = CGRectGetMaxY(self.textLblFrame) + self.topCmtLblFrame.size.height  + self.cmtLbFrame.size.height + 10*QHCScreen_HRtio;
+
+    CGFloat btnY = (self.isWord ? CGRectGetMaxY(self.textLblFrame) : CGRectGetMaxY(self.centerFrame)) + self.topCmtLblFrame.size.height  + self.cmtLbFrame.size.height + 10*QHCScreen_HRtio;
     
-    self.bottomLineFrame = CGRectMake(0, btnY + 1.0*QHCScreen_HRtio, screenW, 1.0*QHCScreen_HRtio);
+    self.bottomLineFrame = CGRectMake(0, btnY, screenW, 1.0*QHCScreen_HRtio);
     
     self.dingBtnFrame = CGRectMake(0, btnY, btnW, btnH);
     self.caiBtnFrame = CGRectMake(CGRectGetMaxX(self.dingBtnFrame), btnY, btnW, btnH);

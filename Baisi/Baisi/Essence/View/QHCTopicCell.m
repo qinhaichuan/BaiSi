@@ -242,16 +242,7 @@
     self.commentBtn.frame = self.topicModel.commentBtnFrame;
     self.bottomLine.frame = self.topicModel.bottomLineFrame;
     
-    
-    CGFloat btnW = self.width/4;
-    CGFloat btnH = 35*QHCScreen_HRtio;
-    CGFloat btnY = CGRectGetMaxY(self.textLbl.frame) + self.topCmtLbl.height + self.cmtLbl.height + 10*QHCScreen_HRtio;
-    for (int i = 0; i < self.btnLineArr.count; i++) {
-        
-        UIImageView *btnLineV = self.btnLineArr[i];
-        btnLineV.frame = CGRectMake((i + 1) * btnW, btnY + 1.0*QHCScreen_HRtio, 1.0*QHCScreen_WRtio, btnH - 2.0*QHCScreen_HRtio);
-        
-    }
+
     
     if (self.type == QHCtopicPicture) {
         self.pictureView.frame = self.topicModel.centerFrame;
@@ -261,6 +252,16 @@
         
     }
     
+    
+    CGFloat btnW = self.width/4;
+    CGFloat btnH = 35*QHCScreen_HRtio;
+    CGFloat btnY = CGRectGetMaxY(self.bottomLine.frame);
+    for (int i = 0; i < self.btnLineArr.count; i++) {
+        
+        UIImageView *btnLineV = self.btnLineArr[i];
+        btnLineV.frame = CGRectMake((i + 1) * btnW, btnY + 1.0*QHCScreen_HRtio, 1.0*QHCScreen_WRtio, btnH - 2.0*QHCScreen_HRtio);
+        
+    }
     
     
     

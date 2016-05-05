@@ -165,6 +165,7 @@
 {
     [super layoutSubviews];
     
+    /*
     self.profileImageView.frame = CGRectMake(10*QHCScreen_WRtio, 10*QHCScreen_HRtio, 35*QHCScreen_WRtio, 35*QHCScreen_HRtio);
 
     CGSize nameLblSize = [self.nameLbl.text sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}];
@@ -178,9 +179,6 @@
     CGSize textLblSize = [self.textLbl.text boundingRectWithSize:CGSizeMake(self.width - 20*QHCScreen_WRtio, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size;
     self.textLbl.frame = CGRectMake(10*QHCScreen_WRtio, CGRectGetMaxY(self.profileImageView.frame) + 10.0*QHCScreen_HRtio, textLblSize.width, textLblSize.height);
     
-//    CGFloat topCmtX = 10*QHCScreen_WRtio;
-//    CGFloat topCmtY = 0;
-//    CGFloat topCmt
     
     if (self.topicModel.top_cmt.count) {
     
@@ -212,10 +210,36 @@
         
     }
     
-//    self.height = CGRectGetMaxY(self.commentBtn.frame);
-
+    self.height = CGRectGetMaxY(self.commentBtn.frame);
+    QHCLog(@"====++++++++%lf", self.height);
 //    self.height = 100;
 
+     */
+    
+    self.profileImageView.frame = self.topicModel.profileImageViewFrame;
+    self.nameLbl.frame = self.topicModel.nameLblFrame;
+    self.createdAtLbl.frame = self.topicModel.createdAtLblFrame;
+    self.moreBtn.frame = self.topicModel.moreBtnFrame;
+    self.textLbl.frame = self.topicModel.textLblFrame;
+    self.topCmtLbl.frame = self.topicModel.topCmtLblFrame;
+    self.cmtLbl.frame = self.topicModel.cmtLbFrame;
+    self.bottomLine.frame = self.topicModel.bottomLineFrame;
+    self.dingBtn.frame = self.topicModel.dingBtnFrame;
+    self.caiBtn.frame = self.topicModel.caiBtnFrame;
+    self.repostBtn.frame = self.topicModel.repostBtnFrame;
+    self.commentBtn.frame = self.topicModel.commentBtnFrame;
+    self.bottomLine.frame = self.topicModel.bottomLineFrame;
+    
+    
+    CGFloat btnW = self.width/4;
+    CGFloat btnH = 35*QHCScreen_HRtio;
+    CGFloat btnY = CGRectGetMaxY(self.textLbl.frame) + self.topCmtLbl.height + self.cmtLbl.height + 10*QHCScreen_HRtio;
+    for (int i = 0; i < self.btnLineArr.count; i++) {
+        
+        UIImageView *btnLineV = self.btnLineArr[i];
+        btnLineV.frame = CGRectMake((i + 1) * btnW, btnY + 1.0*QHCScreen_HRtio, 1.0*QHCScreen_WRtio, btnH - 2.0*QHCScreen_HRtio);
+        
+    }
 }
 
 -(void)setFrame:(CGRect)frame

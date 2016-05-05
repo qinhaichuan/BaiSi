@@ -11,12 +11,12 @@
 #import "QHCTopicCell.h"
 @interface QHCAllViewController()
 
-@property(nonatomic, strong) NSMutableArray *topicModelArr;
+@property(nonatomic, strong) NSMutableArray<QHCTopicModel *> *topicModelArr;
 @property(nonatomic, copy) NSString *maxTime;
-
 @end
 
 @implementation QHCAllViewController
+
 
 - (NSMutableArray *)topicModelArr
 {
@@ -40,7 +40,9 @@
 - (void)setupTable
 {
     self.tableView.backgroundColor = QHCBgColor
-    self.tableView.rowHeight = 200*QHCScreen_HRtio;
+//    self.tableView.rowHeight = 200*QHCScreen_HRtio;
+//    self.tableView.estimatedRowHeight = 200.0;
+//    self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.contentInset = UIEdgeInsetsMake(35*QHCScreen_HRtio, 0, 50*QHCScreen_HRtio, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
@@ -136,6 +138,10 @@
     return cell;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
 
+    return self.topicModelArr[indexPath.row].cellHeight;
+}
 
 @end

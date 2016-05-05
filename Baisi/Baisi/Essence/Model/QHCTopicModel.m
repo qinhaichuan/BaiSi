@@ -51,4 +51,58 @@
 
 }
 
+- (CGFloat)cellHeight
+{
+    self.profileImageViewFrame = CGRectMake(10*QHCScreen_WRtio, 10*QHCScreen_HRtio, 35*QHCScreen_WRtio, 35*QHCScreen_HRtio);
+    
+    CGSize nameLblSize = [self.name sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}];
+    self.nameLblFrame = CGRectMake(CGRectGetMaxX(self.profileImageViewFrame) + 10.0*QHCScreen_WRtio, CGRectGetMinY(self.profileImageViewFrame), nameLblSize.width, nameLblSize.height);
+    
+    CGSize createdAtLblSize = [self.created_at sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12]}];
+    self.createdAtLblFrame = CGRectMake(self.nameLblFrame.origin.x, CGRectGetMaxY(self.profileImageViewFrame) - createdAtLblSize.height, createdAtLblSize.width, createdAtLblSize.height);
+    
+    self.moreBtnFrame = CGRectMake(screenW - 35*QHCScreen_WRtio - 10*QHCScreen_WRtio, 10*QHCScreen_HRtio, 35*QHCScreen_WRtio, 35*QHCScreen_HRtio);
+    
+    CGSize textLblSize = [self.text boundingRectWithSize:CGSizeMake(screenW - 20*QHCScreen_WRtio, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size;
+    self.textLblFrame = CGRectMake(10*QHCScreen_WRtio, CGRectGetMaxY(self.profileImageViewFrame) + 10.0*QHCScreen_HRtio, textLblSize.width, textLblSize.height);
+    
+    
+    if (self.top_cmt.count) {
+        
+            NSDictionary *dict = self.top_cmt.firstObject;
+            NSString *comment = dict[@"content"];
+            NSString *userName = dict[@"user"][@"username"];
+            NSString *cmtText = [NSString stringWithFormat:@"%@:%@", userName, comment];
+       
+        
+        CGSize topCmtSize = [@"最热评论" sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}];
+        
+        self.topCmtLblFrame = CGRectMake(10*QHCScreen_WRtio, CGRectGetMaxY(self.textLblFrame), topCmtSize.width, topCmtSize.height);
+        
+        CGSize cmtLblSize = [cmtText boundingRectWithSize:CGSizeMake(screenW - 20*QHCScreen_WRtio, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12]} context:nil].size;
+        self.cmtLbFrame = CGRectMake(10*QHCScreen_WRtio, CGRectGetMaxY(self.topCmtLblFrame), cmtLblSize.width, cmtLblSize.height);
+        
+    }
+    
+    
+    CGFloat btnW = screenW/4;
+    CGFloat btnH = 35*QHCScreen_HRtio;
+    CGFloat btnY = CGRectGetMaxY(self.textLblFrame) + self.topCmtLblFrame.size.height  + self.cmtLbFrame.size.height + 10*QHCScreen_HRtio;
+    
+    self.bottomLineFrame = CGRectMake(0, btnY + 1.0*QHCScreen_HRtio, screenW, 1.0*QHCScreen_HRtio);
+    
+    self.dingBtnFrame = CGRectMake(0, btnY, btnW, btnH);
+    self.caiBtnFrame = CGRectMake(CGRectGetMaxX(self.dingBtnFrame), btnY, btnW, btnH);
+    self.repostBtnFrame = CGRectMake(CGRectGetMaxX(self.caiBtnFrame), btnY, btnW, btnH);
+    self.commentBtnFrame = CGRectMake(CGRectGetMaxX(self.repostBtnFrame), btnY, btnW, btnH);
+    
+    
+    CGFloat selfHeight = CGRectGetMaxY(self.commentBtnFrame) + 10*QHCScreen_HRtio;
+    QHCLog(@"====++++++++%lf", selfHeight);
+    return selfHeight;
+    
+
+}
+
+
 @end

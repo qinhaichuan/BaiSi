@@ -113,6 +113,27 @@ typedef enum : NSUInteger {
 @property(nonatomic, strong) NSArray *top_cmt;
 @property(nonatomic, assign) QHCTopicType *topicTpye;
 
+@property(nonatomic, assign) CGFloat cellHeight;
+@property(nonatomic, assign) CGRect profileImageViewFrame;
+@property(nonatomic, assign) CGRect nameLblFrame;
+@property(nonatomic, assign) CGRect createdAtLblFrame;
+@property(nonatomic, assign) CGRect moreBtnFrame;
+@property(nonatomic, assign) CGRect textLblFrame;
+@property(nonatomic, assign) CGRect topCmtLblFrame;
+@property(nonatomic, assign) CGRect cmtLbFrame;
+@property(nonatomic, assign) CGRect bottomLineFrame;
+@property(nonatomic, assign) CGRect dingBtnFrame;
+@property(nonatomic, assign) CGRect caiBtnFrame;
+@property(nonatomic, assign) CGRect repostBtnFrame;
+@property(nonatomic, assign) CGRect commentBtnFrame;
+
+@property(nonatomic, assign) CGRect centerFrame;
+@property(nonatomic, assign) BOOL isBigPicture;
+
+
+
+
+
 
 
 @end

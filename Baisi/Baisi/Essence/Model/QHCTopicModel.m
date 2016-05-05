@@ -8,6 +8,13 @@
 
 #import "QHCTopicModel.h"
 #import "NSDate+QHCExtension.h"
+
+@interface QHCTopicModel()
+
+@property(nonatomic, assign) BOOL isWord;
+
+@end
+
 @implementation QHCTopicModel
 
 -(NSString *)created_at
@@ -63,21 +70,45 @@
     
     self.moreBtnFrame = CGRectMake(screenW - 35*QHCScreen_WRtio - 10*QHCScreen_WRtio, 10*QHCScreen_HRtio, 35*QHCScreen_WRtio, 35*QHCScreen_HRtio);
     
-    CGSize textLblSize = [self.text boundingRectWithSize:CGSizeMake(screenW - 20*QHCScreen_WRtio, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size;
-    self.textLblFrame = CGRectMake(10*QHCScreen_WRtio, CGRectGetMaxY(self.profileImageViewFrame) + 10.0*QHCScreen_HRtio, textLblSize.width, textLblSize.height);
+
+    
+    
+    if (self.type != QHCtopicWord) {
+        self.isWord = NO;
+        
+        CGFloat centerX = MarginX;
+        CGFloat centerY = CGRectGetMaxY(self.profileImageViewFrame) + 10.0*QHCScreen_HRtio;
+        CGFloat centerW = screenW - 2*MarginX;
+        CGFloat centerH = self.height;
+        if (self.height >= screenH) {
+            centerH = 200*QHCScreen_HRtio;
+            self.isBigPicture = YES;
+        }
+        self.centerFrame = CGRectMake(centerX, centerY, centerW, centerH);
+        
+    }else{
+        self.isWord = YES;
+        
+        CGSize textLblSize = [self.text boundingRectWithSize:CGSizeMake(screenW - 20*QHCScreen_WRtio, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size;
+        self.textLblFrame = CGRectMake(10*QHCScreen_WRtio, CGRectGetMaxY(self.profileImageViewFrame) + 10.0*QHCScreen_HRtio, textLblSize.width, textLblSize.height);
+    }
     
     
     if (self.top_cmt.count) {
         
-            NSDictionary *dict = self.top_cmt.firstObject;
-            NSString *comment = dict[@"content"];
-            NSString *userName = dict[@"user"][@"username"];
-            NSString *cmtText = [NSString stringWithFormat:@"%@:%@", userName, comment];
-       
+        NSDictionary *dict = self.top_cmt.firstObject;
+        NSString *comment = dict[@"content"];
+        NSString *userName = dict[@"user"][@"username"];
+        NSString *cmtText = [NSString stringWithFormat:@"%@:%@", userName, comment];
         
         CGSize topCmtSize = [@"最热评论" sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}];
         
-        self.topCmtLblFrame = CGRectMake(10*QHCScreen_WRtio, CGRectGetMaxY(self.textLblFrame), topCmtSize.width, topCmtSize.height);
+        if (self.isWord) {
+             self.topCmtLblFrame = CGRectMake(10*QHCScreen_WRtio, CGRectGetMaxY(self.textLblFrame), topCmtSize.width, topCmtSize.height);
+        }else{
+            self.topCmtLblFrame = CGRectMake(10*QHCScreen_WRtio, CGRectGetMaxY(self.centerFrame), topCmtSize.width, topCmtSize.height);
+        }
+        
         
         CGSize cmtLblSize = [cmtText boundingRectWithSize:CGSizeMake(screenW - 20*QHCScreen_WRtio, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12]} context:nil].size;
         self.cmtLbFrame = CGRectMake(10*QHCScreen_WRtio, CGRectGetMaxY(self.topCmtLblFrame), cmtLblSize.width, cmtLblSize.height);
@@ -95,6 +126,9 @@
     self.caiBtnFrame = CGRectMake(CGRectGetMaxX(self.dingBtnFrame), btnY, btnW, btnH);
     self.repostBtnFrame = CGRectMake(CGRectGetMaxX(self.caiBtnFrame), btnY, btnW, btnH);
     self.commentBtnFrame = CGRectMake(CGRectGetMaxX(self.repostBtnFrame), btnY, btnW, btnH);
+    
+    
+    
     
     
     CGFloat selfHeight = CGRectGetMaxY(self.commentBtnFrame) + 10*QHCScreen_HRtio;

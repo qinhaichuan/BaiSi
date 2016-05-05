@@ -8,7 +8,7 @@
 
 #import "QHCTopicCell.h"
 #import "QHCTopicModel.h"
-
+#import "QHCPictureView.h"
 @interface QHCTopicCell()
 
 @property(nonatomic, weak) UILabel *nameLbl;
@@ -24,11 +24,23 @@
 @property(nonatomic, strong) NSMutableArray *btnLineArr;
 @property(nonatomic, weak) UILabel *topCmtLbl;
 @property(nonatomic, weak) UILabel *cmtLbl;
-@property(nonatomic, assign) QHCTopicType *topicTpye;
+@property(nonatomic, assign) QHCTopicType type;
+
+@property(nonatomic, strong) QHCPictureView *pictureView;
 
 @end
 
 @implementation QHCTopicCell
+
+-(QHCPictureView *)pictureView
+{
+    if (!_pictureView) {
+        
+        _pictureView = [[QHCPictureView alloc] init];
+        [self.contentView addSubview:_pictureView];
+    }
+    return _pictureView;
+}
 
 -(NSMutableArray *)btnLineArr
 {
@@ -240,6 +252,18 @@
         btnLineV.frame = CGRectMake((i + 1) * btnW, btnY + 1.0*QHCScreen_HRtio, 1.0*QHCScreen_WRtio, btnH - 2.0*QHCScreen_HRtio);
         
     }
+    
+    if (self.type == QHCtopicPicture) {
+        self.pictureView.frame = self.topicModel.centerFrame;
+    }else if (self.type == QHCtopicVoice) {
+        
+    }else if (self.type == QHCtopicVideo) {
+        
+    }
+    
+    
+    
+    
 }
 
 -(void)setFrame:(CGRect)frame

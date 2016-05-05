@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum : NSUInteger {
+typedef enum {
     QHCtopicPicture = 10,
     QHCtopicWord = 29,
     QHCtopicVoice = 31,
-    QHCtopicVideo = 41,
+    QHCtopicVideo = 41
 } QHCTopicType;
 
 @interface QHCTopicModel : NSObject
@@ -111,7 +111,13 @@ typedef enum : NSUInteger {
 @property(nonatomic, assign) NSInteger repost;
 @property(nonatomic, assign) NSInteger comment;
 @property(nonatomic, strong) NSArray *top_cmt;
-@property(nonatomic, assign) QHCTopicType *topicTpye;
+@property(nonatomic, copy) NSString *large_image;
+@property(nonatomic, copy) NSString *middle_image;
+@property(nonatomic, copy) NSString *small_image;
+@property(nonatomic, assign) CGFloat height;
+@property(nonatomic, assign) CGFloat width;
+@property(nonatomic, assign) BOOL is_gif;
+@property(nonatomic, assign) QHCTopicType type;
 
 @property(nonatomic, assign) CGFloat cellHeight;
 @property(nonatomic, assign) CGRect profileImageViewFrame;
@@ -128,7 +134,7 @@ typedef enum : NSUInteger {
 @property(nonatomic, assign) CGRect commentBtnFrame;
 
 @property(nonatomic, assign) CGRect centerFrame;
-@property(nonatomic, assign) BOOL isBigPicture;
+@property(nonatomic, assign, getter=isBigPicture) BOOL isBigPicture;
 
 
 

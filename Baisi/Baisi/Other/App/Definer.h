@@ -35,6 +35,8 @@
 #define screenW [UIScreen mainScreen].bounds.size.width * 1.0f
 #define screenH [UIScreen mainScreen].bounds.size.height * 1.0f
 
+#define MarginX 10.0*screenW
+
 // 字符判断
 #define QHCStr(s)     ((s!=nil) && [s isKindOfClass:[NSString class]] && ![s isEqualToString:@""])
 #define QHCArr(s) ((s!=nil) && [s isKindOfClass:[NSArray class]] && [s count]>0)

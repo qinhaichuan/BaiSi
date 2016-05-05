@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3650F57EDBE52E4C65FE8880 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D843ECCE28D1F08BC29629 /* libPods.a */; };
 		F861AFF31CDAE2CB00295890 /* NSDate+QHCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F861AFF21CDAE2CB00295890 /* NSDate+QHCExtension.m */; };
+		F861AFF61CDB59AE00295890 /* QHCPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = F861AFF51CDB59AE00295890 /* QHCPictureView.m */; };
 		F87E0A9C1CD4EFB70058B478 /* QHCSubTagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F87E0A9B1CD4EFB70058B478 /* QHCSubTagModel.m */; };
 		F87E0A9F1CD505280058B478 /* QHCSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F87E0A9E1CD505280058B478 /* QHCSubTagCell.m */; };
 		F87E0AAB1CD7309D0058B478 /* UIImage+QHCCircleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F87E0AAA1CD7309D0058B478 /* UIImage+QHCCircleImage.m */; };
@@ -58,6 +59,8 @@
 		C5D843ECCE28D1F08BC29629 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F861AFF11CDAE2CB00295890 /* NSDate+QHCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+QHCExtension.h"; sourceTree = "<group>"; };
 		F861AFF21CDAE2CB00295890 /* NSDate+QHCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+QHCExtension.m"; sourceTree = "<group>"; };
+		F861AFF41CDB59AE00295890 /* QHCPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCPictureView.h; sourceTree = "<group>"; };
+		F861AFF51CDB59AE00295890 /* QHCPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCPictureView.m; sourceTree = "<group>"; };
 		F87E0A9A1CD4EFB70058B478 /* QHCSubTagModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCSubTagModel.h; sourceTree = "<group>"; };
 		F87E0A9B1CD4EFB70058B478 /* QHCSubTagModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCSubTagModel.m; sourceTree = "<group>"; };
 		F87E0A9D1CD505280058B478 /* QHCSubTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCSubTagCell.h; sourceTree = "<group>"; };
@@ -240,6 +243,8 @@
 				F8C6696D1CD8DD3A00944EC5 /* QHCBtn.m */,
 				F8D5EA0B1CD9916C00ED51F2 /* QHCTopicCell.h */,
 				F8D5EA0C1CD9916C00ED51F2 /* QHCTopicCell.m */,
+				F861AFF41CDB59AE00295890 /* QHCPictureView.h */,
+				F861AFF51CDB59AE00295890 /* QHCPictureView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -605,6 +610,7 @@
 				F8FC02CB1CD9A43C00D03423 /* QHCTopicModel.m in Sources */,
 				F8C669531CD896B400944EC5 /* QHCClearCacheCell.m in Sources */,
 				F8B41F891CD1C1230037F306 /* QHCFriendTrendsViewController.m in Sources */,
+				F861AFF61CDB59AE00295890 /* QHCPictureView.m in Sources */,
 				F8BCD74D1CD74649005DD79D /* QHCMeCell.m in Sources */,
 				F8B41FA61CD21ABA0037F306 /* QHCButton.m in Sources */,
 				F8C835461CD4CC40002342DB /* QHCNavigationViewController.m in Sources */,

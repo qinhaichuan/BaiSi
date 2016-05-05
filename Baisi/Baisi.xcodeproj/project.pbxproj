@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3650F57EDBE52E4C65FE8880 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D843ECCE28D1F08BC29629 /* libPods.a */; };
+		F861AFF31CDAE2CB00295890 /* NSDate+QHCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F861AFF21CDAE2CB00295890 /* NSDate+QHCExtension.m */; };
 		F87E0A9C1CD4EFB70058B478 /* QHCSubTagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F87E0A9B1CD4EFB70058B478 /* QHCSubTagModel.m */; };
 		F87E0A9F1CD505280058B478 /* QHCSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F87E0A9E1CD505280058B478 /* QHCSubTagCell.m */; };
 		F87E0AAB1CD7309D0058B478 /* UIImage+QHCCircleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F87E0AAA1CD7309D0058B478 /* UIImage+QHCCircleImage.m */; };
@@ -55,6 +56,8 @@
 		2F8A04677EB3A8E158219F63 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AAD2376BC69302D5111E0809 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C5D843ECCE28D1F08BC29629 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F861AFF11CDAE2CB00295890 /* NSDate+QHCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+QHCExtension.h"; sourceTree = "<group>"; };
+		F861AFF21CDAE2CB00295890 /* NSDate+QHCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+QHCExtension.m"; sourceTree = "<group>"; };
 		F87E0A9A1CD4EFB70058B478 /* QHCSubTagModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCSubTagModel.h; sourceTree = "<group>"; };
 		F87E0A9B1CD4EFB70058B478 /* QHCSubTagModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCSubTagModel.m; sourceTree = "<group>"; };
 		F87E0A9D1CD505280058B478 /* QHCSubTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCSubTagCell.h; sourceTree = "<group>"; };
@@ -409,6 +412,8 @@
 				F8BCD7581CD78AB2005DD79D /* UIView+QHCExtension.m */,
 				F8C6695A1CD89D8300944EC5 /* NSString+QHCFileSize.h */,
 				F8C6695B1CD89D8300944EC5 /* NSString+QHCFileSize.m */,
+				F861AFF11CDAE2CB00295890 /* NSDate+QHCExtension.h */,
+				F861AFF21CDAE2CB00295890 /* NSDate+QHCExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -581,6 +586,7 @@
 				F87E0AAE1CD7322B0058B478 /* UIImageView+QHCCircleImageView.m in Sources */,
 				F8B41F961CD1CBF70037F306 /* QHCSettingViewController.m in Sources */,
 				F8B41F8B1CD1C1230037F306 /* QHCNewViewController.m in Sources */,
+				F861AFF31CDAE2CB00295890 /* NSDate+QHCExtension.m in Sources */,
 				F8C835331CD36ACC002342DB /* QHCHttpManger.m in Sources */,
 				F8B41F8A1CD1C1230037F306 /* QHCMeViewController.m in Sources */,
 				F8C6696E1CD8DD3A00944EC5 /* QHCBtn.m in Sources */,

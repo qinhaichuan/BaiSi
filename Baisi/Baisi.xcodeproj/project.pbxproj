@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3650F57EDBE52E4C65FE8880 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D843ECCE28D1F08BC29629 /* libPods.a */; };
 		F810B2FF1CDC9177005E47B7 /* QHCSeeBigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F810B2FE1CDC9177005E47B7 /* QHCSeeBigViewController.m */; };
+		F84EDE071CDCA6B50090D32F /* QHCVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F84EDE061CDCA6B50090D32F /* QHCVideoView.m */; };
+		F84EDE0A1CDCA6BF0090D32F /* QHCVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F84EDE091CDCA6BF0090D32F /* QHCVoiceView.m */; };
 		F861AFF31CDAE2CB00295890 /* NSDate+QHCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F861AFF21CDAE2CB00295890 /* NSDate+QHCExtension.m */; };
 		F861AFF61CDB59AE00295890 /* QHCPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = F861AFF51CDB59AE00295890 /* QHCPictureView.m */; };
 		F87E0A9C1CD4EFB70058B478 /* QHCSubTagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F87E0A9B1CD4EFB70058B478 /* QHCSubTagModel.m */; };
@@ -60,6 +62,10 @@
 		C5D843ECCE28D1F08BC29629 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F810B2FD1CDC9177005E47B7 /* QHCSeeBigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCSeeBigViewController.h; sourceTree = "<group>"; };
 		F810B2FE1CDC9177005E47B7 /* QHCSeeBigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCSeeBigViewController.m; sourceTree = "<group>"; };
+		F84EDE051CDCA6B50090D32F /* QHCVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCVideoView.h; sourceTree = "<group>"; };
+		F84EDE061CDCA6B50090D32F /* QHCVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCVideoView.m; sourceTree = "<group>"; };
+		F84EDE081CDCA6BF0090D32F /* QHCVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCVoiceView.h; sourceTree = "<group>"; };
+		F84EDE091CDCA6BF0090D32F /* QHCVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCVoiceView.m; sourceTree = "<group>"; };
 		F861AFF11CDAE2CB00295890 /* NSDate+QHCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+QHCExtension.h"; sourceTree = "<group>"; };
 		F861AFF21CDAE2CB00295890 /* NSDate+QHCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+QHCExtension.m"; sourceTree = "<group>"; };
 		F861AFF41CDB59AE00295890 /* QHCPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCPictureView.h; sourceTree = "<group>"; };
@@ -248,6 +254,10 @@
 				F8D5EA0C1CD9916C00ED51F2 /* QHCTopicCell.m */,
 				F861AFF41CDB59AE00295890 /* QHCPictureView.h */,
 				F861AFF51CDB59AE00295890 /* QHCPictureView.m */,
+				F84EDE051CDCA6B50090D32F /* QHCVideoView.h */,
+				F84EDE061CDCA6B50090D32F /* QHCVideoView.m */,
+				F84EDE081CDCA6BF0090D32F /* QHCVoiceView.h */,
+				F84EDE091CDCA6BF0090D32F /* QHCVoiceView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -608,6 +618,7 @@
 				F810B2FF1CDC9177005E47B7 /* QHCSeeBigViewController.m in Sources */,
 				F8C6696B1CD8BE8A00944EC5 /* QHCWordsViewController.m in Sources */,
 				F8C669681CD8BE7B00944EC5 /* QHCPictureViewController.m in Sources */,
+				F84EDE071CDCA6B50090D32F /* QHCVideoView.m in Sources */,
 				F8C669561CD898A300944EC5 /* QHCOtherCell.m in Sources */,
 				F8BCD75C1CD78D95005DD79D /* QHCSquareButton.m in Sources */,
 				F87E0A9C1CD4EFB70058B478 /* QHCSubTagModel.m in Sources */,
@@ -626,6 +637,7 @@
 				F8BCD7621CD7A8D6005DD79D /* QHCWebView.m in Sources */,
 				F8B41F9D1CD2059E0037F306 /* QHCTestViewController.m in Sources */,
 				F8C835391CD4A0B8002342DB /* QHCShareHttper.m in Sources */,
+				F84EDE0A1CDCA6BF0090D32F /* QHCVoiceView.m in Sources */,
 				F8B41F9A1CD1CD080037F306 /* UIBarButtonItem+QHCBarButtonItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

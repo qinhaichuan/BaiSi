@@ -9,6 +9,9 @@
 #import "QHCTopicCell.h"
 #import "QHCTopicModel.h"
 #import "QHCPictureView.h"
+#import "QHCVoiceView.h"
+#import "QHCVideoView.h"
+
 @interface QHCTopicCell()
 
 @property(nonatomic, weak) UILabel *nameLbl;
@@ -27,10 +30,30 @@
 //@property(nonatomic, assign) QHCTopicType type;
 
 @property(nonatomic, strong) QHCPictureView *pictureView;
+@property(nonatomic, strong) QHCVideoView *videoView;
+@property(nonatomic, strong) QHCVoiceView *voiceView;
 
 @end
 
 @implementation QHCTopicCell
+
+-(QHCVideoView *)videoView
+{
+    if (!_videoView) {
+        _videoView = [[QHCVideoView alloc] init];
+        [self.contentView addSubview:_videoView];
+    }
+    return _videoView;
+}
+
+-(QHCVoiceView *)voiceView
+{
+    if (!_voiceView) {
+        _voiceView = [[QHCVoiceView alloc] init];
+        [self.contentView addSubview:_voiceView];
+    }
+    return _voiceView;
+}
 
 -(QHCPictureView *)pictureView
 {
@@ -243,17 +266,24 @@
     
     if (self.topicModel.type == QHCtopicPicture) {
         self.pictureView.hidden = NO;
+        self.videoView.hidden = YES;
+        self.voiceView.hidden = YES;
         self.pictureView.frame = self.topicModel.centerFrame;
-//        self.pictureView.topic = self.topicModel;
 //        QHCLog(@"%@", NSStringFromCGRect(self.pictureView.frame));
     }else if (self.topicModel.type == QHCtopicVoice) {
         self.pictureView.hidden = YES;
-
+        self.videoView.hidden = YES;
+        self.voiceView.hidden = NO;
+        self.voiceView.frame = self.topicModel.centerFrame;
     }else if (self.topicModel.type == QHCtopicVideo) {
         self.pictureView.hidden = YES;
+        self.videoView.hidden = NO;
+        self.voiceView.hidden = YES;
+        self.videoView.frame = self.topicModel.centerFrame;
     }else{
         self.pictureView.hidden = YES;
-
+        self.videoView.hidden = YES;
+        self.voiceView.hidden = YES;
     }
     
     
@@ -304,7 +334,8 @@
     [self setBtn:self.commentBtn titlle:@"评论" number:topicModel.comment];
 
     self.pictureView.topic = self.topicModel;
-    
+    self.videoView.topicModel = self.topicModel;
+    self.voiceView.topicModel = self.topicModel;
 }
 
 - (void)setBtn:(UIButton *)btn titlle:(NSString *)title number:(NSInteger)number

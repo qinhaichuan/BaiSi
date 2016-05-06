@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class QHCTopicModel;
 @interface QHCPictureView : UIView
+
+@property(nonatomic, strong) QHCTopicModel *topic;
 
 @end

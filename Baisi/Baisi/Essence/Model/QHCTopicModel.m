@@ -86,7 +86,6 @@
         }
         self.centerFrame = CGRectMake(centerX, centerY, centerW, centerH);
         
-        
     }else{
         self.isWord = YES;
         
@@ -127,10 +126,8 @@
     
     
     
-    
-    
     CGFloat selfHeight = CGRectGetMaxY(self.commentBtnFrame) + 10*QHCScreen_HRtio;
-    QHCLog(@"====++++++++%lf", selfHeight);
+//    QHCLog(@"====++++++++%lf", selfHeight);
     return selfHeight;
     
 

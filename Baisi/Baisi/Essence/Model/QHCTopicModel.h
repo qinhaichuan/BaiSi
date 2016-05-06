@@ -111,9 +111,12 @@ typedef enum {
 @property(nonatomic, assign) NSInteger repost;
 @property(nonatomic, assign) NSInteger comment;
 @property(nonatomic, strong) NSArray *top_cmt;
-@property(nonatomic, copy) NSString *large_image;
-@property(nonatomic, copy) NSString *middle_image;
-@property(nonatomic, copy) NSString *small_image;
+//@property(nonatomic, copy) NSString *large_image;
+//@property(nonatomic, copy) NSString *middle_image;
+//@property(nonatomic, copy) NSString *small_image;
+@property(nonatomic, copy) NSString *image0;
+@property(nonatomic, copy) NSString *image1;
+@property(nonatomic, copy) NSString *image2;
 @property(nonatomic, assign) CGFloat height;
 @property(nonatomic, assign) CGFloat width;
 @property(nonatomic, assign) BOOL is_gif;

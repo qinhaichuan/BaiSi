@@ -30,12 +30,16 @@
 #define QHCBgColor QHCColor(206, 206, 206, 1)
 
 // 屏幕宽度比例适配
-#define QHCScreen_WRtio [UIScreen mainScreen].bounds.size.width / 414.0f
-#define QHCScreen_HRtio [UIScreen mainScreen].bounds.size.height / 736.0f
-#define screenW [UIScreen mainScreen].bounds.size.width * 1.0f
-#define screenH [UIScreen mainScreen].bounds.size.height * 1.0f
+//#define QHCScreen_WRtio [UIScreen mainScreen].bounds.size.width / 414.0f
+#define QHCScreen_WRtio 1
+//#define QHCScreen_HRtio [UIScreen mainScreen].bounds.size.height / 736.0f
+#define QHCScreen_HRtio 1
+#define screenW [UIScreen mainScreen].bounds.size.width
+#define screenH [UIScreen mainScreen].bounds.size.height
 
-#define MarginX 10.0*screenW
+//#define MarginX 10.0*QHCScreen_WRtio
+#define MarginX 10.0f
+
 
 // 字符判断
 #define QHCStr(s)     ((s!=nil) && [s isKindOfClass:[NSString class]] && ![s isEqualToString:@""])

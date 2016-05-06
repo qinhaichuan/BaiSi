@@ -24,7 +24,7 @@
 @property(nonatomic, strong) NSMutableArray *btnLineArr;
 @property(nonatomic, weak) UILabel *topCmtLbl;
 @property(nonatomic, weak) UILabel *cmtLbl;
-@property(nonatomic, assign) QHCTopicType type;
+//@property(nonatomic, assign) QHCTopicType type;
 
 @property(nonatomic, strong) QHCPictureView *pictureView;
 
@@ -121,7 +121,6 @@
 //        }
 
         
-        
         UIButton *dingBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         self.dingBtn = dingBtn;
         [self setBottomBtn:dingBtn title:@"顶" image:@"mainCellDing" highImage:@"mainCellDingClick" target:self action:@selector(dingClick)];
@@ -153,8 +152,6 @@
         }
         
         
-        
-
         
     }
     return self;
@@ -244,12 +241,19 @@
     
 
     
-    if (self.type == QHCtopicPicture) {
+    if (self.topicModel.type == QHCtopicPicture) {
+        self.pictureView.hidden = NO;
         self.pictureView.frame = self.topicModel.centerFrame;
-    }else if (self.type == QHCtopicVoice) {
-        
-    }else if (self.type == QHCtopicVideo) {
-        
+//        self.pictureView.topic = self.topicModel;
+//        QHCLog(@"%@", NSStringFromCGRect(self.pictureView.frame));
+    }else if (self.topicModel.type == QHCtopicVoice) {
+        self.pictureView.hidden = YES;
+
+    }else if (self.topicModel.type == QHCtopicVideo) {
+        self.pictureView.hidden = YES;
+    }else{
+        self.pictureView.hidden = YES;
+
     }
     
     
@@ -299,7 +303,7 @@
     [self setBtn:self.repostBtn titlle:@"分享" number:topicModel.repost];
     [self setBtn:self.commentBtn titlle:@"评论" number:topicModel.comment];
 
-    
+    self.pictureView.topic = self.topicModel;
     
 }
 

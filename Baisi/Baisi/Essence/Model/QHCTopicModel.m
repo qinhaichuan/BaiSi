@@ -71,15 +71,13 @@
     self.moreBtnFrame = CGRectMake(screenW - 35*QHCScreen_WRtio - 10*QHCScreen_WRtio, 10*QHCScreen_HRtio, 35*QHCScreen_WRtio, 35*QHCScreen_HRtio);
     
 
-    
-    
     if (self.type != QHCtopicWord) {
         self.isWord = NO;
         
         CGFloat centerX = MarginX;
         CGFloat centerY = CGRectGetMaxY(self.profileImageViewFrame) + 10.0*QHCScreen_HRtio;
         CGFloat centerW = screenW - 2*MarginX;
-        CGFloat centerH = self.height;
+        CGFloat centerH = self.height * centerW / screenW;
         if (centerH >= screenH - 200*QHCScreen_HRtio) {
             centerH = 200*QHCScreen_HRtio;
             self.isBigPicture = YES;

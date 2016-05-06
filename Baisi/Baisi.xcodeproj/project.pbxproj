@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3650F57EDBE52E4C65FE8880 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D843ECCE28D1F08BC29629 /* libPods.a */; };
+		F810B2FF1CDC9177005E47B7 /* QHCSeeBigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F810B2FE1CDC9177005E47B7 /* QHCSeeBigViewController.m */; };
 		F861AFF31CDAE2CB00295890 /* NSDate+QHCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F861AFF21CDAE2CB00295890 /* NSDate+QHCExtension.m */; };
 		F861AFF61CDB59AE00295890 /* QHCPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = F861AFF51CDB59AE00295890 /* QHCPictureView.m */; };
 		F87E0A9C1CD4EFB70058B478 /* QHCSubTagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F87E0A9B1CD4EFB70058B478 /* QHCSubTagModel.m */; };
@@ -57,6 +58,8 @@
 		2F8A04677EB3A8E158219F63 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AAD2376BC69302D5111E0809 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C5D843ECCE28D1F08BC29629 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F810B2FD1CDC9177005E47B7 /* QHCSeeBigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCSeeBigViewController.h; sourceTree = "<group>"; };
+		F810B2FE1CDC9177005E47B7 /* QHCSeeBigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCSeeBigViewController.m; sourceTree = "<group>"; };
 		F861AFF11CDAE2CB00295890 /* NSDate+QHCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+QHCExtension.h"; sourceTree = "<group>"; };
 		F861AFF21CDAE2CB00295890 /* NSDate+QHCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+QHCExtension.m"; sourceTree = "<group>"; };
 		F861AFF41CDB59AE00295890 /* QHCPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCPictureView.h; sourceTree = "<group>"; };
@@ -266,6 +269,8 @@
 				F8C669671CD8BE7B00944EC5 /* QHCPictureViewController.m */,
 				F8C669691CD8BE8A00944EC5 /* QHCWordsViewController.h */,
 				F8C6696A1CD8BE8A00944EC5 /* QHCWordsViewController.m */,
+				F810B2FD1CDC9177005E47B7 /* QHCSeeBigViewController.h */,
+				F810B2FE1CDC9177005E47B7 /* QHCSeeBigViewController.m */,
 			);
 			path = ViewContorller;
 			sourceTree = "<group>";
@@ -600,6 +605,7 @@
 				F8C835471CD4CC40002342DB /* QHCTabBar.m in Sources */,
 				F8B41FA31CD21A9B0037F306 /* QHCLoginViewController.m in Sources */,
 				F87E0AAB1CD7309D0058B478 /* UIImage+QHCCircleImage.m in Sources */,
+				F810B2FF1CDC9177005E47B7 /* QHCSeeBigViewController.m in Sources */,
 				F8C6696B1CD8BE8A00944EC5 /* QHCWordsViewController.m in Sources */,
 				F8C669681CD8BE7B00944EC5 /* QHCPictureViewController.m in Sources */,
 				F8C669561CD898A300944EC5 /* QHCOtherCell.m in Sources */,

@@ -121,6 +121,11 @@ typedef enum {
 @property(nonatomic, assign) CGFloat width;
 @property(nonatomic, assign) BOOL is_gif;
 @property(nonatomic, assign) QHCTopicType type;
+@property (nonatomic, assign) NSInteger playcount;
+@property (nonatomic, assign) NSInteger voicetime;
+@property (nonatomic, assign) NSInteger videotime;
+
+
 
 @property(nonatomic, assign) CGFloat cellHeight;
 @property(nonatomic, assign) CGRect profileImageViewFrame;

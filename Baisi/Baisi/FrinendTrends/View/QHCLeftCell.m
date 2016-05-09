@@ -33,7 +33,7 @@
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
-        self.backgroundColor = QHCBgColor
+        self.backgroundColor = [UIColor whiteColor];
         
         UIView *tagView = [[UIView alloc] init];
         self.tagView = tagView;
@@ -57,8 +57,8 @@
 {
     [super layoutSubviews];
     
-    self.tagView.frame = CGRectMake(0, 0, 10*QHCScreen_WRtio, self.height);
-    self.tagLbl.frame = CGRectMake(10*QHCScreen_WRtio, 0, self.width - 10*QHCScreen_WRtio, self.height);
+    self.tagView.frame = CGRectMake(0, 0, 10*QHCScreen_WRtio, self.height-2);
+    self.tagLbl.frame = CGRectMake(10*QHCScreen_WRtio, 0, self.width - 10*QHCScreen_WRtio, self.height-2);
     
 
 }
@@ -85,6 +85,14 @@
 
 }
 
+//- (void)setFrame:(CGRect)frame
+//{
+//    
+//    frame.origin.y += 1;
+//    frame.size.height -= 1;
+//    
+//    [super setFrame:frame];
+//}
 
 
 @end

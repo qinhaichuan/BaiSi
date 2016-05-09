@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class QHCRecommendUserModel;
 @interface QHCRightCell : UITableViewCell
+@property(nonatomic, strong) QHCRecommendUserModel *recommendUserModel;
 +(instancetype)cellWithTableView:(UITableView *)tableView;
 @end

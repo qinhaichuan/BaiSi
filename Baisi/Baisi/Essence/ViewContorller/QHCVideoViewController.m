@@ -7,11 +7,11 @@
 //
 
 #import "QHCVideoViewController.h"
-
 @implementation QHCVideoViewController
--(void)viewDidLoad
+
+-(QHCTopicType)type
 {
-    [super viewDidLoad];
-    self.view.backgroundColor = QHCRandom_Color
+    return QHCtopicVideo;
 }
+
 @end

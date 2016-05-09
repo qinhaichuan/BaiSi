@@ -9,9 +9,10 @@
 #import "QHCVoiceViewController.h"
 
 @implementation QHCVoiceViewController
--(void)viewDidLoad
+
+- (QHCTopicType)type
 {
-    [super viewDidLoad];
-    self.view.backgroundColor = QHCRandom_Color
+    return QHCtopicVoice;
 }
+
 @end

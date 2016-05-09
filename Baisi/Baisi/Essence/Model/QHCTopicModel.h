@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef enum {
+    QHCtopicAll = 1,
     QHCtopicPicture = 10,
     QHCtopicWord = 29,
     QHCtopicVoice = 31,

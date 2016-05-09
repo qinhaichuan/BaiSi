@@ -29,6 +29,7 @@
         
         UIImageView *iconView = [[UIImageView alloc] initWithFrame:self.bounds];
         self.iconView = iconView;
+//        iconView.contentMode = UIViewContentModeScaleAspectFit;
 //        iconView.backgroundColor = [UIColor blueColor];
         iconView.userInteractionEnabled = YES;
         [iconView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeBigClick)]];
@@ -95,7 +96,7 @@
         self.daProgressV.progress = progress;
         NSString *progressText = [NSString stringWithFormat:@"%.0f%%", progress * 100];
         self.daProgressV.progressLabel.text = progressText;
-        QHCLog(@"---%zd : %zd+++++%f===%@===%@", receivedSize, expectedSize, self.daProgressV.progress, progressText, self.daProgressV.progressLabel);
+//        QHCLog(@"---%zd : %zd+++++%f===%@===%@", receivedSize, expectedSize, self.daProgressV.progress, progressText, self.daProgressV.progressLabel);
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         self.placeImageV.hidden = YES;
         self.daProgressV.hidden = YES;

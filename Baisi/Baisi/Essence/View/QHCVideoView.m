@@ -27,9 +27,11 @@
     if (self = [super initWithFrame:frame]) {
         
         self.backgroundColor = QHCBgColor;
+        self.autoresizingMask = UIViewAutoresizingNone;
         
         UIImageView *imageV = [[UIImageView alloc] init];
         self.imageV = imageV;
+        imageV.contentMode = UIViewContentModeScaleToFill;
         imageV.userInteractionEnabled = YES;
         [imageV addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeBigClick)]];
         [self addSubview:imageV];

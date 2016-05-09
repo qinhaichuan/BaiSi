@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface QHCNewViewController : UIViewController
+#import "QHCEssenceViewController.h"
+@interface QHCNewViewController : QHCEssenceViewController
 
 @end

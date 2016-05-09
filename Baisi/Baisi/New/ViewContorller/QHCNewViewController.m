@@ -16,18 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem barBtuttonItemImage:@"MainTagSubIcon" highImage:@"MainTagSubIconClick" target:self action:@selector(mainSubClick)];
+//
+//    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
+//    self.navigationItem.leftBarButtonItem = [UIBarButtonItem barBtuttonItemImage:@"MainTagSubIcon" highImage:@"MainTagSubIconClick" target:self action:@selector(mainSubClick)];
     
 
 }
 
-- (void)mainSubClick
-{
-    QHCLogFunc
-
-}
+//- (void)mainSubClick
+//{
+//    QHCLogFunc
+//
+//}
 
 
 

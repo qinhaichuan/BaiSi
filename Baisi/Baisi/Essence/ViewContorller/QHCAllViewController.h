@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QHCTopViewController.h"
 
-@interface QHCAllViewController : UITableViewController
+@interface QHCAllViewController : QHCTopViewController
 
 @end

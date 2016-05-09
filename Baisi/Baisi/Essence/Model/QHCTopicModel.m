@@ -77,7 +77,8 @@
         CGFloat centerX = MarginX;
         CGFloat centerY = CGRectGetMaxY(self.profileImageViewFrame) + 10.0*QHCScreen_HRtio;
         CGFloat centerW = screenW - 2*MarginX;
-        CGFloat centerH = self.height * centerW / screenW;
+        CGFloat centerH = self.height * centerW / self.width;
+//        CGFloat centerH = self.height;
         if (centerH >= screenH - 200*QHCScreen_HRtio) {
             centerH = 200*QHCScreen_HRtio;
             self.isBigPicture = YES;

@@ -9,9 +9,8 @@
 #import "QHCPictureViewController.h"
 
 @implementation QHCPictureViewController
--(void)viewDidLoad
+- (QHCTopicType)type
 {
-    [super viewDidLoad];
-    self.view.backgroundColor = QHCRandom_Color
+    return QHCtopicPicture;
 }
 @end

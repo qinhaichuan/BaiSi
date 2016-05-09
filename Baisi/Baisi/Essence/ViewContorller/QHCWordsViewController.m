@@ -9,9 +9,10 @@
 #import "QHCWordsViewController.h"
 
 @implementation QHCWordsViewController
--(void)viewDidLoad
+- (QHCTopicType)type
 {
-    [super viewDidLoad];
-    self.view.backgroundColor = QHCRandom_Color
+    return QHCtopicWord;
 }
+
+
 @end

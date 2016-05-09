@@ -14,8 +14,7 @@
 		F84EDE0D1CE033B50090D32F /* QHCTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F84EDE0C1CE033B50090D32F /* QHCTopViewController.m */; };
 		F84EDE101CE03FCF0090D32F /* QHCLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F84EDE0F1CE03FCF0090D32F /* QHCLeftCell.m */; };
 		F84EDE131CE03FD80090D32F /* QHCRightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F84EDE121CE03FD80090D32F /* QHCRightCell.m */; };
-		F84EDE1C1CE0466A0090D32F /* QHCLeftTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F84EDE1B1CE0466A0090D32F /* QHCLeftTableView.m */; };
-		F84EDE1F1CE046750090D32F /* QHCRightTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F84EDE1E1CE046750090D32F /* QHCRightTableView.m */; };
+		F84EDE221CE07B4C0090D32F /* QHCRecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F84EDE211CE07B4C0090D32F /* QHCRecommendModel.m */; };
 		F861AFF31CDAE2CB00295890 /* NSDate+QHCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F861AFF21CDAE2CB00295890 /* NSDate+QHCExtension.m */; };
 		F861AFF61CDB59AE00295890 /* QHCPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = F861AFF51CDB59AE00295890 /* QHCPictureView.m */; };
 		F87E0A9C1CD4EFB70058B478 /* QHCSubTagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F87E0A9B1CD4EFB70058B478 /* QHCSubTagModel.m */; };
@@ -77,10 +76,8 @@
 		F84EDE0F1CE03FCF0090D32F /* QHCLeftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCLeftCell.m; sourceTree = "<group>"; };
 		F84EDE111CE03FD80090D32F /* QHCRightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCRightCell.h; sourceTree = "<group>"; };
 		F84EDE121CE03FD80090D32F /* QHCRightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCRightCell.m; sourceTree = "<group>"; };
-		F84EDE1A1CE0466A0090D32F /* QHCLeftTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCLeftTableView.h; sourceTree = "<group>"; };
-		F84EDE1B1CE0466A0090D32F /* QHCLeftTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCLeftTableView.m; sourceTree = "<group>"; };
-		F84EDE1D1CE046750090D32F /* QHCRightTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCRightTableView.h; sourceTree = "<group>"; };
-		F84EDE1E1CE046750090D32F /* QHCRightTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCRightTableView.m; sourceTree = "<group>"; };
+		F84EDE201CE07B4C0090D32F /* QHCRecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCRecommendModel.h; sourceTree = "<group>"; };
+		F84EDE211CE07B4C0090D32F /* QHCRecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCRecommendModel.m; sourceTree = "<group>"; };
 		F861AFF11CDAE2CB00295890 /* NSDate+QHCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+QHCExtension.h"; sourceTree = "<group>"; };
 		F861AFF21CDAE2CB00295890 /* NSDate+QHCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+QHCExtension.m"; sourceTree = "<group>"; };
 		F861AFF41CDB59AE00295890 /* QHCPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCPictureView.h; sourceTree = "<group>"; };
@@ -315,6 +312,8 @@
 		F8B41F691CD1C1230037F306 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F84EDE201CE07B4C0090D32F /* QHCRecommendModel.h */,
+				F84EDE211CE07B4C0090D32F /* QHCRecommendModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -328,10 +327,6 @@
 				F84EDE0F1CE03FCF0090D32F /* QHCLeftCell.m */,
 				F84EDE111CE03FD80090D32F /* QHCRightCell.h */,
 				F84EDE121CE03FD80090D32F /* QHCRightCell.m */,
-				F84EDE1A1CE0466A0090D32F /* QHCLeftTableView.h */,
-				F84EDE1B1CE0466A0090D32F /* QHCLeftTableView.m */,
-				F84EDE1D1CE046750090D32F /* QHCRightTableView.h */,
-				F84EDE1E1CE046750090D32F /* QHCRightTableView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -622,7 +617,6 @@
 			files = (
 				F8C8353E1CD4CC21002342DB /* AppDelegate.m in Sources */,
 				F8B41F881CD1C1230037F306 /* QHCEssenceViewController.m in Sources */,
-				F84EDE1F1CE046750090D32F /* QHCRightTableView.m in Sources */,
 				F8B41F8D1CD1C1230037F306 /* Baisi.xcdatamodeld in Sources */,
 				F8C835301CD3658A002342DB /* QHCSubTagViewController.m in Sources */,
 				F87E0A9F1CD505280058B478 /* QHCSubTagCell.m in Sources */,
@@ -644,7 +638,6 @@
 				F87E0AAB1CD7309D0058B478 /* UIImage+QHCCircleImage.m in Sources */,
 				F810B2FF1CDC9177005E47B7 /* QHCSeeBigViewController.m in Sources */,
 				F8C6696B1CD8BE8A00944EC5 /* QHCWordsViewController.m in Sources */,
-				F84EDE1C1CE0466A0090D32F /* QHCLeftTableView.m in Sources */,
 				F8C669681CD8BE7B00944EC5 /* QHCPictureViewController.m in Sources */,
 				F84EDE071CDCA6B50090D32F /* QHCVideoView.m in Sources */,
 				F84EDE131CE03FD80090D32F /* QHCRightCell.m in Sources */,
@@ -655,6 +648,7 @@
 				F8BCD75F1CD78DE2005DD79D /* QHCSquareModel.m in Sources */,
 				F84EDE0D1CE033B50090D32F /* QHCTopViewController.m in Sources */,
 				F8FC02CB1CD9A43C00D03423 /* QHCTopicModel.m in Sources */,
+				F84EDE221CE07B4C0090D32F /* QHCRecommendModel.m in Sources */,
 				F8C669531CD896B400944EC5 /* QHCClearCacheCell.m in Sources */,
 				F8B41F891CD1C1230037F306 /* QHCFriendTrendsViewController.m in Sources */,
 				F861AFF61CDB59AE00295890 /* QHCPictureView.m in Sources */,

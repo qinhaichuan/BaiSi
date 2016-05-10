@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 @class QHCTopicModel;
-@interface QHCCommentViewController : UITableViewController
+@interface QHCCommentViewController : UIViewController
 @property(nonatomic, strong) QHCTopicModel *topicModel;
 @end

@@ -17,6 +17,8 @@
 		F84EDE221CE07B4C0090D32F /* QHCRecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F84EDE211CE07B4C0090D32F /* QHCRecommendModel.m */; };
 		F84EDE251CE09B5C0090D32F /* QHCRecommendUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F84EDE241CE09B5C0090D32F /* QHCRecommendUserModel.m */; };
 		F84EDE281CE1764E0090D32F /* QHCCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F84EDE271CE1764E0090D32F /* QHCCommentViewController.m */; };
+		F84EDE2B1CE1F22F0090D32F /* QHCCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F84EDE2A1CE1F22F0090D32F /* QHCCommentCell.m */; };
+		F84EDE2E1CE1F24F0090D32F /* QHCCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F84EDE2D1CE1F24F0090D32F /* QHCCommentModel.m */; };
 		F861AFF31CDAE2CB00295890 /* NSDate+QHCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F861AFF21CDAE2CB00295890 /* NSDate+QHCExtension.m */; };
 		F861AFF61CDB59AE00295890 /* QHCPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = F861AFF51CDB59AE00295890 /* QHCPictureView.m */; };
 		F87E0A9C1CD4EFB70058B478 /* QHCSubTagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F87E0A9B1CD4EFB70058B478 /* QHCSubTagModel.m */; };
@@ -36,6 +38,9 @@
 		F8B41F9D1CD2059E0037F306 /* QHCTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41F9C1CD2059E0037F306 /* QHCTestViewController.m */; };
 		F8B41FA31CD21A9B0037F306 /* QHCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41FA21CD21A9B0037F306 /* QHCLoginViewController.m */; };
 		F8B41FA61CD21ABA0037F306 /* QHCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B41FA51CD21ABA0037F306 /* QHCButton.m */; };
+		F8B5A3A21CE22B8000865F54 /* MBProgressHUD+QHC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B5A39E1CE22B8000865F54 /* MBProgressHUD+QHC.m */; };
+		F8B5A3A31CE22B8000865F54 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F8B5A39F1CE22B8000865F54 /* MBProgressHUD.bundle */; };
+		F8B5A3A41CE22B8000865F54 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B5A3A11CE22B8000865F54 /* MBProgressHUD.m */; };
 		F8BCD74D1CD74649005DD79D /* QHCMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BCD74C1CD74649005DD79D /* QHCMeCell.m */; };
 		F8BCD7501CD7466E005DD79D /* QHCMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BCD74F1CD7466E005DD79D /* QHCMeFooterView.m */; };
 		F8BCD7591CD78AB2005DD79D /* UIView+QHCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BCD7581CD78AB2005DD79D /* UIView+QHCExtension.m */; };
@@ -84,6 +89,11 @@
 		F84EDE241CE09B5C0090D32F /* QHCRecommendUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCRecommendUserModel.m; sourceTree = "<group>"; };
 		F84EDE261CE1764E0090D32F /* QHCCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCCommentViewController.h; sourceTree = "<group>"; };
 		F84EDE271CE1764E0090D32F /* QHCCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCCommentViewController.m; sourceTree = "<group>"; };
+		F84EDE291CE1F22F0090D32F /* QHCCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCCommentCell.h; sourceTree = "<group>"; };
+		F84EDE2A1CE1F22F0090D32F /* QHCCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCCommentCell.m; sourceTree = "<group>"; };
+		F84EDE2C1CE1F24F0090D32F /* QHCCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCCommentModel.h; sourceTree = "<group>"; };
+		F84EDE2D1CE1F24F0090D32F /* QHCCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCCommentModel.m; sourceTree = "<group>"; };
+		F84EDE3D1CE214340090D32F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F861AFF11CDAE2CB00295890 /* NSDate+QHCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+QHCExtension.h"; sourceTree = "<group>"; };
 		F861AFF21CDAE2CB00295890 /* NSDate+QHCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+QHCExtension.m"; sourceTree = "<group>"; };
 		F861AFF41CDB59AE00295890 /* QHCPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCPictureView.h; sourceTree = "<group>"; };
@@ -119,6 +129,11 @@
 		F8B41FA21CD21A9B0037F306 /* QHCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCLoginViewController.m; sourceTree = "<group>"; };
 		F8B41FA41CD21ABA0037F306 /* QHCButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCButton.h; sourceTree = "<group>"; };
 		F8B41FA51CD21ABA0037F306 /* QHCButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCButton.m; sourceTree = "<group>"; };
+		F8B5A39D1CE22B8000865F54 /* MBProgressHUD+QHC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+QHC.h"; sourceTree = "<group>"; };
+		F8B5A39E1CE22B8000865F54 /* MBProgressHUD+QHC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+QHC.m"; sourceTree = "<group>"; };
+		F8B5A39F1CE22B8000865F54 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		F8B5A3A01CE22B8000865F54 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		F8B5A3A11CE22B8000865F54 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		F8BCD74B1CD74649005DD79D /* QHCMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCMeCell.h; sourceTree = "<group>"; };
 		F8BCD74C1CD74649005DD79D /* QHCMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCMeCell.m; sourceTree = "<group>"; };
 		F8BCD74E1CD7466E005DD79D /* QHCMeFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCMeFooterView.h; sourceTree = "<group>"; };
@@ -195,9 +210,18 @@
 		AC346308114632031C9EFE9B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F84EDE3D1CE214340090D32F /* CoreGraphics.framework */,
 				C5D843ECCE28D1F08BC29629 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F84EDE301CE211380090D32F /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				F8B5A39C1CE22B8000865F54 /* MBProgressHUD */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 		F8B41F271CD0C51F0037F306 = {
@@ -257,6 +281,8 @@
 				F87E0A9B1CD4EFB70058B478 /* QHCSubTagModel.m */,
 				F8FC02C91CD9A43C00D03423 /* QHCTopicModel.h */,
 				F8FC02CA1CD9A43C00D03423 /* QHCTopicModel.m */,
+				F84EDE2C1CE1F24F0090D32F /* QHCCommentModel.h */,
+				F84EDE2D1CE1F24F0090D32F /* QHCCommentModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,6 +302,8 @@
 				F84EDE061CDCA6B50090D32F /* QHCVideoView.m */,
 				F84EDE081CDCA6BF0090D32F /* QHCVoiceView.h */,
 				F84EDE091CDCA6BF0090D32F /* QHCVoiceView.m */,
+				F84EDE291CE1F22F0090D32F /* QHCCommentCell.h */,
+				F84EDE2A1CE1F22F0090D32F /* QHCCommentCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -439,6 +467,7 @@
 		F8B41F7A1CD1C1230037F306 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				F84EDE301CE211380090D32F /* lib */,
 				F8C8353A1CD4CC21002342DB /* App */,
 				F8B41F871CD1C1230037F306 /* Tools */,
 				F8B41F7F1CD1C1230037F306 /* Category */,
@@ -477,6 +506,18 @@
 				F8C835381CD4A0B8002342DB /* QHCShareHttper.m */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		F8B5A39C1CE22B8000865F54 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				F8B5A39D1CE22B8000865F54 /* MBProgressHUD+QHC.h */,
+				F8B5A39E1CE22B8000865F54 /* MBProgressHUD+QHC.m */,
+				F8B5A39F1CE22B8000865F54 /* MBProgressHUD.bundle */,
+				F8B5A3A01CE22B8000865F54 /* MBProgressHUD.h */,
+				F8B5A3A11CE22B8000865F54 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		F8C8353A1CD4CC21002342DB /* App */ = {
@@ -567,6 +608,7 @@
 			files = (
 				F8B41F431CD0C51F0037F306 /* Assets.xcassets in Resources */,
 				F8B41F8E1CD1C1230037F306 /* Info.plist in Resources */,
+				F8B5A3A31CE22B8000865F54 /* MBProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,9 +675,12 @@
 				F84EDE251CE09B5C0090D32F /* QHCRecommendUserModel.m in Sources */,
 				F8C6695F1CD8BE0100944EC5 /* QHCAllViewController.m in Sources */,
 				F8D5EA0D1CD9916C00ED51F2 /* QHCTopicCell.m in Sources */,
+				F84EDE2E1CE1F24F0090D32F /* QHCCommentModel.m in Sources */,
 				F8C835481CD4CC40002342DB /* QHCTabBarVC.m in Sources */,
+				F84EDE2B1CE1F22F0090D32F /* QHCCommentCell.m in Sources */,
 				F87E0AAE1CD7322B0058B478 /* UIImageView+QHCCircleImageView.m in Sources */,
 				F8B41F961CD1CBF70037F306 /* QHCSettingViewController.m in Sources */,
+				F8B5A3A41CE22B8000865F54 /* MBProgressHUD.m in Sources */,
 				F8B41F8B1CD1C1230037F306 /* QHCNewViewController.m in Sources */,
 				F84EDE101CE03FCF0090D32F /* QHCLeftCell.m in Sources */,
 				F861AFF31CDAE2CB00295890 /* NSDate+QHCExtension.m in Sources */,
@@ -674,6 +719,7 @@
 				F8B41F9D1CD2059E0037F306 /* QHCTestViewController.m in Sources */,
 				F8C835391CD4A0B8002342DB /* QHCShareHttper.m in Sources */,
 				F84EDE0A1CDCA6BF0090D32F /* QHCVoiceView.m in Sources */,
+				F8B5A3A21CE22B8000865F54 /* MBProgressHUD+QHC.m in Sources */,
 				F8B41F9A1CD1CD080037F306 /* UIBarButtonItem+QHCBarButtonItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -773,6 +819,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Baisi/Other/App/QHC.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Baisi/Other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = QHC.Baisi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -789,6 +836,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Baisi/Other/App/QHC.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Baisi/Other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = QHC.Baisi;
 				PRODUCT_NAME = "$(TARGET_NAME)";

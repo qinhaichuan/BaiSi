@@ -78,7 +78,7 @@
     __weak typeof(self) weakSelf = self;
     [QHCHttpManger getDataWithDict:params success:^(NSDictionary *responseDict) {
         [SVProgressHUD dismiss];
-        QHCLog(@"==--------===%@", responseDict);
+//        QHCLog(@"==--------===%@", responseDict);
         if (QHCDict(responseDict)) {
             weakSelf.maxTime = responseDict[@"info"][@"maxtime"];
             weakSelf.topicModelArr = [QHCTopicModel mj_objectArrayWithKeyValuesArray:responseDict[@"list"]];
@@ -113,7 +113,7 @@
     
     __weak typeof(self) weakSelf = self;
     [QHCHttpManger getDataWithDict:params success:^(NSDictionary *responseDict) {
-        QHCLog(@"++========++%@", responseDict);
+//        QHCLog(@"++========++%@", responseDict);
         [SVProgressHUD dismiss];
         if (QHCDict(responseDict)) {
             NSMutableArray *moreArr = [QHCTopicModel mj_objectArrayWithKeyValuesArray:responseDict[@"list"]];

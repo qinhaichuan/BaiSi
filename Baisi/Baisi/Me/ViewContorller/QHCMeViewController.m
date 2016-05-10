@@ -10,6 +10,7 @@
 #import "QHCSettingViewController.h"
 #import "QHCMeCell.h"
 #import "QHCMeFooterView.h"
+#import "QHCLoginViewController.h"
 @interface QHCMeViewController ()
 
 @end
@@ -82,6 +83,19 @@
     }
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        QHCLoginViewController *logVc = [[QHCLoginViewController alloc] init];
+//             UITabBarController *root = (UITabBarController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+//            UINavigationController *nav = root.selectedViewController;
+        [self presentViewController:logVc animated:YES completion:nil];
+    }
+
+}
+
+
 
 
 

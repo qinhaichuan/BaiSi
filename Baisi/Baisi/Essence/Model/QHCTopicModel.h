@@ -102,6 +102,10 @@ typedef enum {
  );
  */
 
+/** id */
+@property (nonatomic, copy) NSString *id;
+/** mid */
+@property (nonatomic, copy) NSString *tag;
 
 @property(nonatomic, copy) NSString *name;
 @property(nonatomic, copy) NSString *profile_image;

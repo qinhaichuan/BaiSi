@@ -36,7 +36,7 @@
         
         [SVProgressHUD dismiss];
         
-        QHCLog(@"返回3: %@", responseDict);
+//        QHCLog(@"返回3: %@", responseDict);
         
         if (responseDict) {
             

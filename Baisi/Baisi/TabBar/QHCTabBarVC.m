@@ -46,9 +46,10 @@
 
 - (void)setChildVC
 {
+    [self setOneChildVc:[[QHCNavigationViewController alloc] initWithRootViewController:[[QHCEssenceViewController alloc] init]] Title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
+
     [self setOneChildVc:[[QHCNavigationViewController alloc] initWithRootViewController:[[QHCFriendTrendsViewController alloc] init]] Title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
 
-    [self setOneChildVc:[[QHCNavigationViewController alloc] initWithRootViewController:[[QHCEssenceViewController alloc] init]] Title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
     [self setOneChildVc:[[QHCNavigationViewController alloc] initWithRootViewController:[[QHCMeViewController alloc] initWithStyle:UITableViewStyleGrouped]] Title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
     [self setOneChildVc:[[QHCNavigationViewController alloc] initWithRootViewController:[[QHCNewViewController alloc] init]] Title:@"新贴" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
     

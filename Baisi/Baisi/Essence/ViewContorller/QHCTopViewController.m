@@ -9,6 +9,7 @@
 #import "QHCTopViewController.h"
 #import "QHCTopicCell.h"
 #import "QHCNewViewController.h"
+#import "QHCCommentViewController.h"
 @interface QHCTopViewController()
 
 @property(nonatomic, strong) NSMutableArray<QHCTopicModel *> *topicModelArr;
@@ -157,5 +158,11 @@
     return self.topicModelArr[indexPath.row].cellHeight;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    QHCCommentViewController *commentVc = [[QHCCommentViewController alloc] init];
+    commentVc.topicModel = self.topicModelArr[indexPath.row];
+    [self.navigationController pushViewController:commentVc animated:YES];
+}
 
 @end

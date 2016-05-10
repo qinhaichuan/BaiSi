@@ -60,7 +60,10 @@
 
 - (CGFloat)cellHeight
 {
+    CGFloat cellHeight = 0;
+    
     self.profileImageViewFrame = CGRectMake(10*QHCScreen_WRtio, 10*QHCScreen_HRtio, 35*QHCScreen_WRtio, 35*QHCScreen_HRtio);
+    
     
     CGSize nameLblSize = [self.name sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}];
     self.nameLblFrame = CGRectMake(CGRectGetMaxX(self.profileImageViewFrame) + 10.0*QHCScreen_WRtio, CGRectGetMinY(self.profileImageViewFrame), nameLblSize.width, nameLblSize.height);
@@ -70,26 +73,25 @@
     
     self.moreBtnFrame = CGRectMake(screenW - 35*QHCScreen_WRtio - 10*QHCScreen_WRtio, 10*QHCScreen_HRtio, 35*QHCScreen_WRtio, 35*QHCScreen_HRtio);
     
-
+    cellHeight = self.profileImageViewFrame.size.height + 20*QHCScreen_HRtio;
+    
+    CGSize textLblSize = [self.text boundingRectWithSize:CGSizeMake(screenW - 20*QHCScreen_WRtio, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size;
+    self.textLblFrame = CGRectMake(10*QHCScreen_WRtio, cellHeight, textLblSize.width, textLblSize.height);
+    
+    cellHeight += textLblSize.height + 10.0*QHCScreen_HRtio;
+    
     if (self.type != QHCtopicWord) {
-        self.isWord = NO;
-        
         CGFloat centerX = MarginX;
-        CGFloat centerY = CGRectGetMaxY(self.profileImageViewFrame) + 10.0*QHCScreen_HRtio;
         CGFloat centerW = screenW - 2*MarginX;
         CGFloat centerH = self.height * centerW / self.width;
-//        CGFloat centerH = self.height;
+        //        CGFloat centerH = self.height;
         if (centerH >= screenH - 200*QHCScreen_HRtio) {
             centerH = 200*QHCScreen_HRtio;
             self.isBigPicture = YES;
         }
-        self.centerFrame = CGRectMake(centerX, centerY, centerW, centerH);
+        self.centerFrame = CGRectMake(centerX, cellHeight, centerW, centerH);
         
-    }else{
-        self.isWord = YES;
-        
-        CGSize textLblSize = [self.text boundingRectWithSize:CGSizeMake(screenW - 20*QHCScreen_WRtio, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size;
-        self.textLblFrame = CGRectMake(10*QHCScreen_WRtio, CGRectGetMaxY(self.profileImageViewFrame) + 10.0*QHCScreen_HRtio, textLblSize.width, textLblSize.height);
+        cellHeight += centerH + 10.0*QHCScreen_HRtio;
     }
     
     
@@ -102,32 +104,32 @@
         
         CGSize topCmtSize = [@"最热评论" sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}];
         
-        self.topCmtLblFrame = CGRectMake(10*QHCScreen_WRtio, self.isWord ? CGRectGetMaxY(self.textLblFrame) :CGRectGetMaxY(self.centerFrame), topCmtSize.width, topCmtSize.height);
+        self.topCmtLblFrame = CGRectMake(10*QHCScreen_WRtio, cellHeight, topCmtSize.width, topCmtSize.height);
+        
+        cellHeight += topCmtSize.height;
         
         CGSize cmtLblSize = [cmtText boundingRectWithSize:CGSizeMake(screenW - 20*QHCScreen_WRtio, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12]} context:nil].size;
-        self.cmtLbFrame = CGRectMake(10*QHCScreen_WRtio, CGRectGetMaxY(self.topCmtLblFrame), cmtLblSize.width, cmtLblSize.height);
+        self.cmtLbFrame = CGRectMake(10*QHCScreen_WRtio, cellHeight, cmtLblSize.width, cmtLblSize.height);
+        
+        cellHeight += cmtLblSize.height;
         
     }
     
     
     CGFloat btnW = screenW/4;
     CGFloat btnH = 35*QHCScreen_HRtio;
-//    CGFloat btnY = CGRectGetMaxY(self.textLblFrame) + self.topCmtLblFrame.size.height  + self.cmtLbFrame.size.height + 10*QHCScreen_HRtio;
 
-    CGFloat btnY = (self.isWord ? CGRectGetMaxY(self.textLblFrame) : CGRectGetMaxY(self.centerFrame)) + self.topCmtLblFrame.size.height  + self.cmtLbFrame.size.height + 10*QHCScreen_HRtio;
+    self.bottomLineFrame = CGRectMake(0, cellHeight, screenW, 1.0*QHCScreen_HRtio);
     
-    self.bottomLineFrame = CGRectMake(0, btnY, screenW, 1.0*QHCScreen_HRtio);
+    self.dingBtnFrame = CGRectMake(0, cellHeight, btnW, btnH);
+    self.caiBtnFrame = CGRectMake(CGRectGetMaxX(self.dingBtnFrame), cellHeight, btnW, btnH);
+    self.repostBtnFrame = CGRectMake(CGRectGetMaxX(self.caiBtnFrame), cellHeight, btnW, btnH);
+    self.commentBtnFrame = CGRectMake(CGRectGetMaxX(self.repostBtnFrame), cellHeight, btnW, btnH);
     
-    self.dingBtnFrame = CGRectMake(0, btnY, btnW, btnH);
-    self.caiBtnFrame = CGRectMake(CGRectGetMaxX(self.dingBtnFrame), btnY, btnW, btnH);
-    self.repostBtnFrame = CGRectMake(CGRectGetMaxX(self.caiBtnFrame), btnY, btnW, btnH);
-    self.commentBtnFrame = CGRectMake(CGRectGetMaxX(self.repostBtnFrame), btnY, btnW, btnH);
+    cellHeight += btnH + 10.0*QHCScreen_HRtio;
     
-    
-    
-    CGFloat selfHeight = CGRectGetMaxY(self.commentBtnFrame) + 10*QHCScreen_HRtio;
-//    QHCLog(@"====++++++++%lf", selfHeight);
-    return selfHeight;
+//    QHCLog(@"====++++++++%lf", cellHeight);
+    return cellHeight;
     
 
 }

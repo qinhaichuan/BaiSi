@@ -16,6 +16,7 @@
 		F84EDE131CE03FD80090D32F /* QHCRightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F84EDE121CE03FD80090D32F /* QHCRightCell.m */; };
 		F84EDE221CE07B4C0090D32F /* QHCRecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F84EDE211CE07B4C0090D32F /* QHCRecommendModel.m */; };
 		F84EDE251CE09B5C0090D32F /* QHCRecommendUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F84EDE241CE09B5C0090D32F /* QHCRecommendUserModel.m */; };
+		F84EDE281CE1764E0090D32F /* QHCCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F84EDE271CE1764E0090D32F /* QHCCommentViewController.m */; };
 		F861AFF31CDAE2CB00295890 /* NSDate+QHCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F861AFF21CDAE2CB00295890 /* NSDate+QHCExtension.m */; };
 		F861AFF61CDB59AE00295890 /* QHCPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = F861AFF51CDB59AE00295890 /* QHCPictureView.m */; };
 		F87E0A9C1CD4EFB70058B478 /* QHCSubTagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F87E0A9B1CD4EFB70058B478 /* QHCSubTagModel.m */; };
@@ -81,6 +82,8 @@
 		F84EDE211CE07B4C0090D32F /* QHCRecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCRecommendModel.m; sourceTree = "<group>"; };
 		F84EDE231CE09B5C0090D32F /* QHCRecommendUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCRecommendUserModel.h; sourceTree = "<group>"; };
 		F84EDE241CE09B5C0090D32F /* QHCRecommendUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCRecommendUserModel.m; sourceTree = "<group>"; };
+		F84EDE261CE1764E0090D32F /* QHCCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCCommentViewController.h; sourceTree = "<group>"; };
+		F84EDE271CE1764E0090D32F /* QHCCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCCommentViewController.m; sourceTree = "<group>"; };
 		F861AFF11CDAE2CB00295890 /* NSDate+QHCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+QHCExtension.h"; sourceTree = "<group>"; };
 		F861AFF21CDAE2CB00295890 /* NSDate+QHCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+QHCExtension.m"; sourceTree = "<group>"; };
 		F861AFF41CDB59AE00295890 /* QHCPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCPictureView.h; sourceTree = "<group>"; };
@@ -298,6 +301,8 @@
 				F8C6696A1CD8BE8A00944EC5 /* QHCWordsViewController.m */,
 				F810B2FD1CDC9177005E47B7 /* QHCSeeBigViewController.h */,
 				F810B2FE1CDC9177005E47B7 /* QHCSeeBigViewController.m */,
+				F84EDE261CE1764E0090D32F /* QHCCommentViewController.h */,
+				F84EDE271CE1764E0090D32F /* QHCCommentViewController.m */,
 			);
 			path = ViewContorller;
 			sourceTree = "<group>";
@@ -635,6 +640,7 @@
 				F84EDE101CE03FCF0090D32F /* QHCLeftCell.m in Sources */,
 				F861AFF31CDAE2CB00295890 /* NSDate+QHCExtension.m in Sources */,
 				F8C835331CD36ACC002342DB /* QHCHttpManger.m in Sources */,
+				F84EDE281CE1764E0090D32F /* QHCCommentViewController.m in Sources */,
 				F8B41F8A1CD1C1230037F306 /* QHCMeViewController.m in Sources */,
 				F8C6696E1CD8DD3A00944EC5 /* QHCBtn.m in Sources */,
 				F8C669621CD8BE5300944EC5 /* QHCVideoViewController.m in Sources */,

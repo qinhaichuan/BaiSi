@@ -10,6 +10,7 @@
 #import "QHCCommentCell.h"
 #import "QHCCommentModel.h"
 #import "QHCTopicModel.h"
+#import "QHCTopicCell.h"
 
 @interface QHCCommentViewController()<UITableViewDelegate, UITableViewDataSource>
 
@@ -17,6 +18,8 @@
 @property(nonatomic, strong) NSMutableArray<QHCCommentModel *> *hottestCommentArr;
 @property(nonatomic, strong) NSMutableArray<QHCCommentModel *> *latestCommentArr;
 @property(nonatomic, weak) UITableView *tableV;
+/** 保存最热评论 */
+@property (nonatomic, strong) id top_cmt;
 @end
 
 @implementation QHCCommentViewController
@@ -46,13 +49,66 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
     
     [self setView];
-    
+    [self setupHeaderview];
     self.tableV.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewDate)];
     self.tableV.mj_header.automaticallyChangeAlpha = YES;
     [self.tableV.mj_header beginRefreshing];
     
     self.tableV.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreDate)];
     self.tableV.mj_footer.automaticallyChangeAlpha = YES;
+    
+}
+
+- (void)setView
+{
+    UITableView *tableV = [[UITableView alloc] initWithFrame:self.view.bounds];
+    self.tableV = tableV;
+    tableV.delegate = self;
+    tableV.dataSource = self;
+//    tableV.rowHeight = UITableViewAutomaticDimension;
+//    tableV.estimatedRowHeight = 200;
+//    tableV.rowHeight = 100;
+    [self.view addSubview:tableV];
+    
+    UIImageView *bottomView = [[UIImageView alloc] initWithFrame:CGRectMake(0, screenH - 44*QHCScreen_HRtio, screenW, 44*QHCScreen_HRtio)];
+    self.bottomView = bottomView;
+    bottomView.image = [UIImage imageNamed:@"comment-bar-bg"];
+    bottomView.userInteractionEnabled = YES;
+    [self.view addSubview:bottomView];
+    
+    UIImageView *commentVoiceV = [[UIImageView alloc] init];
+    commentVoiceV.image = [UIImage imageNamed:@"comment-bar-voice"];
+    commentVoiceV.frame = CGRectMake(2*QHCScreen_WRtio, 2*QHCScreen_HRtio, 40 * QHCScreen_HRtio, 40*QHCScreen_WRtio);
+    [bottomView addSubview:commentVoiceV];
+    
+    UIImageView *commentAtV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"comment_bar_at_icon"]];
+    commentAtV.frame = CGRectMake(bottomView.width - 44*QHCScreen_WRtio, 2, 40*QHCScreen_WRtio, 40*QHCScreen_HRtio);
+    [bottomView addSubview:commentAtV];
+    
+    UITextField *commnetTextF = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMaxX(commentVoiceV.frame) + 5*QHCScreen_WRtio, 5*QHCScreen_HRtio, bottomView.width - commentVoiceV.width - commentAtV.width - 16*QHCScreen_WRtio, bottomView.height - 10*QHCScreen_HRtio)];
+    [commnetTextF setPlaceholder:@"写评论..."];
+    commnetTextF.borderStyle = UITextBorderStyleRoundedRect;
+    [bottomView addSubview:commnetTextF];
+}
+
+- (void)setupHeaderview
+{
+    if (self.topicModel.top_cmt) {
+        self.top_cmt = self.topicModel.top_cmt;
+        self.topicModel.top_cmt = nil;
+        self.topicModel.cellHeight = 0;
+    }
+    
+    UIView *headerView = [[UIView alloc] init];
+    headerView.userInteractionEnabled = YES;
+    headerView.frame = CGRectMake(0, 0, screenW, self.topicModel.cellHeight);
+    
+    QHCTopicCell *cell = [[QHCTopicCell alloc] initWithFrame:headerView.bounds];
+    cell.topicModel = self.topicModel;
+    [headerView addSubview:cell];
+    
+    self.tableV.tableHeaderView.userInteractionEnabled = YES;
+    self.tableV.tableHeaderView = headerView;
     
 }
 
@@ -68,6 +124,8 @@
     __weak typeof(self) weakSelf = self;
     [QHCHttpManger getDataWithDict:params success:^(NSDictionary *responseDict) {
         [weakSelf.tableV.mj_header endRefreshing];
+//        QHCLog(@"-----=========%@", responseDict);
+
         if (QHCDict(responseDict)) {
             weakSelf.latestCommentArr = [QHCCommentModel mj_objectArrayWithKeyValuesArray:responseDict[@"data"]];
             weakSelf.hottestCommentArr = [QHCCommentModel mj_objectArrayWithKeyValuesArray:responseDict[@"hot"]];
@@ -100,6 +158,9 @@
     __weak typeof(self) weakSelf = self;
     [QHCHttpManger getDataWithDict:params success:^(NSDictionary *responseDict) {
         [weakSelf.tableV.mj_header endRefreshing];
+        
+        QHCLog(@"-----+++++%@", responseDict);
+        
         if (QHCDict(responseDict)) {
             NSArray *arr = [QHCCommentModel mj_objectArrayWithKeyValuesArray:responseDict[@"data"]];
             [weakSelf.latestCommentArr addObjectsFromArray:arr];
@@ -122,37 +183,6 @@
 
 }
 
-
-- (void)setView
-{
-    UITableView *tableV = [[UITableView alloc] initWithFrame:self.view.bounds];
-    self.tableV = tableV;
-    tableV.delegate = self;
-    tableV.dataSource = self;
-    tableV.backgroundColor = QHCRandom_Color
-    [self.view addSubview:tableV];
-    
-    UIImageView *bottomView = [[UIImageView alloc] initWithFrame:CGRectMake(0, screenH - 44*QHCScreen_HRtio, screenW, 44*QHCScreen_HRtio)];
-    self.bottomView = bottomView;
-    bottomView.image = [UIImage imageNamed:@"comment-bar-bg"];
-    bottomView.userInteractionEnabled = YES;
-    [self.view addSubview:bottomView];
-
-    UIImageView *commentVoiceV = [[UIImageView alloc] init];
-    commentVoiceV.image = [UIImage imageNamed:@"comment-bar-voice"];
-    commentVoiceV.frame = CGRectMake(2*QHCScreen_WRtio, 2*QHCScreen_HRtio, 40 * QHCScreen_HRtio, 40*QHCScreen_WRtio);
-    [bottomView addSubview:commentVoiceV];
-    
-    UIImageView *commentAtV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"comment_bar_at_icon"]];
-    commentAtV.frame = CGRectMake(bottomView.width - 44*QHCScreen_WRtio, 2, 40*QHCScreen_WRtio, 40*QHCScreen_HRtio);
-    [bottomView addSubview:commentAtV];
-    
-    UITextField *commnetTextF = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMaxX(commentVoiceV.frame) + 5*QHCScreen_WRtio, 5*QHCScreen_HRtio, bottomView.width - commentVoiceV.width - commentAtV.width - 16*QHCScreen_WRtio, bottomView.height - 10*QHCScreen_HRtio)];
-    [commnetTextF setPlaceholder:@"写评论..."];
-    commnetTextF.borderStyle = UITextBorderStyleRoundedRect;
-    [bottomView addSubview:commnetTextF];
-}
-
 - (void)keyboardChangeFrame:(NSNotification *)note
 {
     CGRect keyBoardY = [note.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
@@ -169,6 +199,16 @@
 
 
 #pragma mark ----- UITableViewDateSource
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (self.hottestCommentArr.count && indexPath.section == 0) {
+        return self.hottestCommentArr[indexPath.row].cellHeight;
+    }else{
+        return self.latestCommentArr[indexPath.row].cellHeight;
+    }
+}
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     if (self.hottestCommentArr.count) return 2;
@@ -187,19 +227,23 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    QHCCommentCell *cell = [QHCCommentCell cellWithTableView:tableView];
     if (self.hottestCommentArr.count && indexPath.section == 0) {
-        QHCCommentCell *cell = [QHCCommentCell cellWithTableView:tableView];
         cell.commentModel = self.hottestCommentArr[indexPath.row];
-        return cell;
     }else{
-        QHCCommentCell *cell = [QHCCommentCell cellWithTableView:tableView];
         cell.commentModel = self.latestCommentArr[indexPath.row];
-        return cell;
     }
-    
+    return cell;
 }
 
-
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if (self.hottestCommentArr.count && section == 0) {
+        return @"最热评论";
+    }else{
+        return @"最新评论";
+    }
+}
 
 
 
@@ -212,6 +256,11 @@
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+   
+    if (self.top_cmt) {
+        self.topicModel.top_cmt = self.top_cmt;
+        self.topicModel.cellHeight = 0;
+    }
 }
 
 @end

@@ -197,57 +197,6 @@
 {
     [super layoutSubviews];
     
-    /*
-    self.profileImageView.frame = CGRectMake(10*QHCScreen_WRtio, 10*QHCScreen_HRtio, 35*QHCScreen_WRtio, 35*QHCScreen_HRtio);
-
-    CGSize nameLblSize = [self.nameLbl.text sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}];
-    self.nameLbl.frame = CGRectMake(CGRectGetMaxX(self.profileImageView.frame) + 10.0*QHCScreen_WRtio, self.profileImageView.y, nameLblSize.width, nameLblSize.height);
-    
-    CGSize createdAtLblSize = [self.createdAtLbl.text sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12]}];
-    self.createdAtLbl.frame = CGRectMake(self.nameLbl.x, CGRectGetMaxY(self.profileImageView.frame) - createdAtLblSize.height, createdAtLblSize.width, createdAtLblSize.height);
-    
-    self.moreBtn.frame = CGRectMake(self.width - 35*QHCScreen_WRtio - 10*QHCScreen_WRtio, 10*QHCScreen_HRtio, 35*QHCScreen_WRtio, 35*QHCScreen_HRtio);
-    
-    CGSize textLblSize = [self.textLbl.text boundingRectWithSize:CGSizeMake(self.width - 20*QHCScreen_WRtio, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size;
-    self.textLbl.frame = CGRectMake(10*QHCScreen_WRtio, CGRectGetMaxY(self.profileImageView.frame) + 10.0*QHCScreen_HRtio, textLblSize.width, textLblSize.height);
-    
-    
-    if (self.topicModel.top_cmt.count) {
-    
-        CGSize topCmtSize = [self.topCmtLbl.text sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}];
-        
-        self.topCmtLbl.frame = CGRectMake(10*QHCScreen_WRtio, CGRectGetMaxY(self.textLbl.frame), topCmtSize.width, topCmtSize.height);
-        
-        CGSize cmtLblSize = [self.cmtLbl.text boundingRectWithSize:CGSizeMake(self.width - 20*QHCScreen_WRtio, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12]} context:nil].size;
-        self.cmtLbl.frame = CGRectMake(10*QHCScreen_WRtio, CGRectGetMaxY(self.topCmtLbl.frame), cmtLblSize.width, cmtLblSize.height);
-        
-    }
-    
-    
-    CGFloat btnW = self.width/4;
-    CGFloat btnH = 35*QHCScreen_HRtio;
-    CGFloat btnY = CGRectGetMaxY(self.textLbl.frame) + self.topCmtLbl.height + self.cmtLbl.height + 10*QHCScreen_HRtio;
-    
-    self.bottomLine.frame = CGRectMake(0, btnY + 1.0*QHCScreen_HRtio, self.width, 1.0*QHCScreen_HRtio);
-    
-    self.dingBtn.frame = CGRectMake(0, btnY, btnW, btnH);
-    self.caiBtn.frame = CGRectMake(CGRectGetMaxX(self.dingBtn.frame), btnY, btnW, btnH);
-    self.repostBtn.frame = CGRectMake(CGRectGetMaxX(self.caiBtn.frame), btnY, btnW, btnH);
-    self.commentBtn.frame = CGRectMake(CGRectGetMaxX(self.repostBtn.frame), btnY, btnW, btnH);
-    
-    for (int i = 0; i < self.btnLineArr.count; i++) {
-        
-        UIImageView *btnLineV = self.btnLineArr[i];
-        btnLineV.frame = CGRectMake((i + 1) * btnW, btnY + 1.0*QHCScreen_HRtio, 1.0*QHCScreen_WRtio, btnH - 2.0*QHCScreen_HRtio);
-        
-    }
-    
-    self.height = CGRectGetMaxY(self.commentBtn.frame);
-    QHCLog(@"====++++++++%lf", self.height);
-//    self.height = 100;
-
-     */
-    
     self.profileImageView.frame = self.topicModel.profileImageViewFrame;
     self.nameLbl.frame = self.topicModel.nameLblFrame;
     self.createdAtLbl.frame = self.topicModel.createdAtLblFrame;
@@ -287,7 +236,7 @@
     }
     
     
-    CGFloat btnW = self.width/4;
+    CGFloat btnW = screenW/4;
     CGFloat btnH = 35*QHCScreen_HRtio;
     CGFloat btnY = CGRectGetMaxY(self.bottomLine.frame);
     for (int i = 0; i < self.btnLineArr.count; i++) {

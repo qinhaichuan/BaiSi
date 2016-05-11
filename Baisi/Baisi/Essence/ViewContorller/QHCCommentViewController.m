@@ -100,14 +100,14 @@
     }
     
     UIView *headerView = [[UIView alloc] init];
-    headerView.userInteractionEnabled = YES;
+//    headerView.userInteractionEnabled = NO;
     headerView.frame = CGRectMake(0, 0, screenW, self.topicModel.cellHeight);
     
     QHCTopicCell *cell = [[QHCTopicCell alloc] initWithFrame:headerView.bounds];
     cell.topicModel = self.topicModel;
     [headerView addSubview:cell];
     
-    self.tableV.tableHeaderView.userInteractionEnabled = YES;
+//    self.tableV.tableHeaderView.userInteractionEnabled = NO;
     self.tableV.tableHeaderView = headerView;
     
 }

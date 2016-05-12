@@ -39,7 +39,7 @@
     NSMutableDictionary *selectedDict = [NSMutableDictionary dictionary];
     selectedDict[NSForegroundColorAttributeName] = [UIColor darkGrayColor];
     
-    UIBarButtonItem *items = [UIBarButtonItem appearance];
+    UITabBarItem *items = [UITabBarItem appearance];
     [items setTitleTextAttributes:normalDict forState:UIControlStateNormal];
     [items setTitleTextAttributes:selectedDict forState:UIControlStateSelected];
 }
